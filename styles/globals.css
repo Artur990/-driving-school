@@ -1,7 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.cart {
+  @apply m-2 mb-4 flex w-full items-center rounded-xl bg-white p-2 font-bold text-black opacity-90;
+}
+.icon {
+  @apply m-2 h-8 w-8 text-red-600;
+}
+.custom-divider {
+  border-top-color: rgba(255, 255, 255, 0.24);
+  border-top-style: dashed;
+  border-top-width: 3px;
+}
+/* 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,4 +35,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+* {
+  box-sizing: border-box;
 }
