@@ -12,7 +12,7 @@ const Header = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url(/about.JPG)",
+            backgroundImage: "url(/about.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             opacity: 0.5,
