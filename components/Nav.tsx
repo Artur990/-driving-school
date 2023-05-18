@@ -4,12 +4,16 @@ import { FaCar, FaMotorcycle, FaTruckMoving, FaBusAlt } from "react-icons/fa";
 import Head from "next/head";
 import { FC, useState } from "react";
 import { GrGallery } from "react-icons/gr";
+
+import { useRouter } from "next/router";
+import Link from "next/link";
+import Image from "next/image";
 interface NavProps {}
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [openMobile, SetIsOpenMobile] = useState(false);
-
+  const route = useRouter();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -23,10 +27,16 @@ export default function Nav() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img className="h-28 w-36" src="/logo.jpg" alt="logo" />
-          </a>
+            <Image
+              height={100}
+              width={100}
+              className="h-28 w-36"
+              src="/logo.jpg"
+              alt="logo"
+            />
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -83,7 +93,11 @@ export default function Nav() {
             {isOpen && (
               <div className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
-                  <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                  <Link
+                    href="/katB"
+                    // onClick={() => route("katB")}
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                  >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <FaCar
                         // icon={faCar}
@@ -96,7 +110,7 @@ export default function Nav() {
                       </a>
                       <p className="mt-1 text-gray-600">Toyota</p>
                     </div>
-                  </div>
+                  </Link>
                   <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <FaMotorcycle className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />

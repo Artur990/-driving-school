@@ -5,6 +5,11 @@ import Nav from "@/components/Nav";
 import Ofert from "@/components/Ofert";
 import Header from "@/components/Header";
 import Contsct from "@/components/Contsct";
+import Gallery from "@/components/Gallery";
+import Food from "@/components/Food";
+import KatA from "@/components/KatA";
+import Steps from "@/components/W5krokach";
+import Carousel from "@/components/Slaider";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -12,10 +17,16 @@ export default function Home() {
     <main
     // className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
-      <Nav />
+      {/* <Nav /> */}
       <Header />
       <Ofert />
-      <Contsct />
+
+      <Gallery />
+      {/* <KatA /> */}
+      <Steps />
+      <Carousel />
+      {/* <Contsct /> */}
+      {/* <Food /> */}
     </main>
   );
 }

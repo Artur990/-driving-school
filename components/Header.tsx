@@ -18,8 +18,8 @@ const Header = () => {
             opacity: 0.5,
           }}
         />
-        <div className="container mx-auto ml-0 flex h-auto w-3/4 flex-col items-start px-4 pt-10 sm:ml-12 sm:items-start md:ml-24 lg:ml-36 2xl:pl-28 2xl:pt-36">
-          <div className="z-10 flex h-[250px] md:h-[200px] w-[350px] flex-col justify-between bg-[#d71f27] sm:h-[180px] sm:w-[550px] md:w-[550px] lg:w-[600px]">
+        <div className="container mt-0 mx-auto ml-0 flex h-auto w-3/4 flex-col items-start px-4 pt-10 sm:ml-12 sm:items-start md:ml-24 lg:ml-36 2xl:pl-28 2xl:pt-36">
+          <div className="z-10 mt-15 flex h-[250px] md:h-[200px] w-[350px] flex-col justify-between bg-[#d71f27] sm:h-[180px] sm:w-[550px] md:w-[550px] lg:w-[600px]">
             <div className="custom-divider relative bottom-3 py-0" />
             <h1 className="p-1 text-center text-2xl text-white sm:text-3xl md:text-5xl font-extrabold">
               SZKOŁA JAZDY STRAŻAK

@@ -9,8 +9,8 @@ interface ContsctProps {}
 const Contsct: FC<ContsctProps> = ({}) => {
   return (
     <section className="h-auto w-full lg:flex ">
-      <div className="relative mx-auto lg:w-1/2 w-4/5  my-10 flex h-auto max-w-5xl items-center bg-white  sm:px-10  lg:px-0 24 2xl:h-[100vh]">
-        <div>
+      <div className="relative mx-auto lg:w-1/2 w-4/5 px-20  flex h-auto max-w-5xl items-start bg-white  sm:px-10  lg:px-0 24 2xl:h-[100vh]">
+        <div className="pl-20 pt-20">
           <h1 className="mb-4 ml-6  text-4xl font-bold">
             Skontaktuj się z nami!
           </h1>
@@ -55,7 +55,7 @@ const Contsct: FC<ContsctProps> = ({}) => {
       {/* form */}
       <div
         id="form"
-        className="relative mx-auto h-auto lg:w-1/2 w-4/5 max-w-5xl bg-white px-4 py-5 sm:px-10 lg:px-24"
+        className="relative mx-auto  h-auto lg:w-1/2 w-4/5 max-w-5xl bg-white px-4 py-5 sm:px-10 lg:px-24"
       >
         <div className="isolate  z-30 bg-white py-4 sm:py-2 lg:px-0 8">
           <div className="mx-auto max-w-2xl text-center">

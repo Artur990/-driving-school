@@ -7,8 +7,8 @@ interface OfertProps {}
 const Ofert = () => {
   const [activeTab, setActiveTab] = useState("car");
   return (
-    <div className="bg-white py-12 sm:py-10">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className=" py-12 sm:py-10 bg-white">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 bg-white">
         <div className="mx-auto max-w-2xl sm:text-center">
           <div className="flex items-center justify-center">
             <img className="h-20 w-28" src="/logo.jpg" alt="logo" />
@@ -63,7 +63,7 @@ const Ofert = () => {
           </div>
         </div>
         {activeTab === "car" && (
-          <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+          <div className="bg-gray-200 mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-400 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
             <div className="p-8 sm:p-10 lg:flex-auto">
               <h3 className="text-2xl font-bold tracking-tight text-gray-900">
                 Kurs kat. B
@@ -82,7 +82,7 @@ const Ofert = () => {
                 <h4 className="flex-none text-sm  leading-6 text-black-600 font-bold">
                   To oferujemy:
                 </h4>
-                <div className="h-px flex-auto bg-gray-100"></div>
+                <div className="h-px flex-auto bg-gray-400"></div>
               </div>
               <ul
                 role="list"
@@ -151,7 +151,7 @@ const Ofert = () => {
               </ul>
             </div>
             <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-              <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
+              <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-gray-300 ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
                 <div className="mx-auto max-w-xs px-8">
                   <p className="text-2xl font-black text-gray-600 ">
                     Możliwe raty!
@@ -185,7 +185,7 @@ const Ofert = () => {
           </div>
         )}
         {activeTab === "motorcycle" && (
-          <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+          <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-400 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
             <div className="p-8 sm:p-10 lg:flex-auto">
               <h3 className="text-2xl font-bold tracking-tight text-gray-900">
                 Kurs kat. AM, A1, A2, A
@@ -204,7 +204,7 @@ const Ofert = () => {
                 <h4 className="flex-none text-sm  leading-6 text-red-600 font-bold">
                   To oferujemy:
                 </h4>
-                <div className="h-px flex-auto bg-gray-100"></div>
+                <div className="h-px flex-auto bg-gray-300"></div>
               </div>
               <ul
                 role="list"
@@ -273,7 +273,7 @@ const Ofert = () => {
               </ul>
             </div>
             <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-              <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
+              <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-gray-300 ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
                 <div className="mx-auto max-w-xs px-8">
                   <p className="text-2xl font-black text-gray-600 ">
                     Możliwe raty!
@@ -307,7 +307,7 @@ const Ofert = () => {
           </div>
         )}
         {activeTab === "truck" && (
-          <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+          <div className="mx-auto mt-16 max-w-2xl rounded-3xl  ring-1 ring-red-400 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
             <div className="p-8 sm:p-10 lg:flex-auto">
               <h3 className="text-2xl font-bold tracking-tight text-gray-900">
                 Kurs kat. C i C + E
@@ -323,10 +323,10 @@ const Ofert = () => {
                 swoją drogę do samodzielnej jazdy!
               </p>
               <div className="mt-10 flex items-center gap-x-4">
-                <h4 className="flex-none text-sm  leading-6 text-red-600 font-bold">
+                <h4 className="flex-none text-sm  leading-6 text-black font-bold">
                   To oferujemy:
                 </h4>
-                <div className="h-px flex-auto bg-gray-100"></div>
+                <div className="h-px flex-auto bg-red-400"></div>
               </div>
               <ul
                 role="list"
@@ -395,7 +395,7 @@ const Ofert = () => {
               </ul>
             </div>
             <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-              <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
+              <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-red-400 ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
                 <div className="mx-auto max-w-xs px-8">
                   <p className="text-2xl font-black text-gray-600 ">
                     Możliwe raty!
