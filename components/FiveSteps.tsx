@@ -42,7 +42,7 @@ const Step = ({ icon, title, description }: any) => {
     </div>
   );
 };
-export default function Steps() {
+export default function FiveSteps() {
   const steps = [
     {
       icon: 1,
@@ -78,7 +78,7 @@ export default function Steps() {
 
   return (
     <div className=" bg-zinc-800 py-10 min-w-[420px]">
-      <h1 className="text-center relative z-10 text-xl p-10 text-white font-extrabold">
+      <h1 className="text-center relative z-9 text-xl p-10 text-white font-extrabold">
         Prawo jazdy w 5 krokach
       </h1>
       {steps.map((step, index) => (

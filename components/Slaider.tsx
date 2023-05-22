@@ -2,13 +2,12 @@ import { FC, useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 
-interface SlaiderProps {}
+interface SliderProps {}
 
-const Carousel: FC<SlaiderProps> = ({}) => {
+const Carousel: FC<SliderProps> = ({}) => {
   const controls = useAnimation();
-  const [direction, setDirection] = useState(1);
-  const [width, setWidth] = useState<any>();
-  const carousel = useRef() as any;
+  const [width, setWidth] = useState<number>(0);
+  const carousel = useRef<HTMLDivElement>(null);
 
   const images = [
     "/kursanci/kursant1.jpg",
@@ -21,50 +20,45 @@ const Carousel: FC<SlaiderProps> = ({}) => {
     "/kursanci/kursant8.jpg",
     "/kursanci/kursant9.jpg",
     "/kursanci/kursant10.jpg",
-  ].concat(
-    "/kursanci/kursant1.jpg",
-    "/kursanci/kursant2.jpg",
-    "/kursanci/kursant3.jpg",
-    "/kursanci/kursant4.jpg",
-    "/kursanci/kursant5.jpg",
-    "/kursanci/kursant6.jpg",
-    "/kursanci/kursant7.jpg",
-    "/kursanci/kursant8.jpg",
-    "/kursanci/kursant9.jpg",
-    "/kursanci/kursant10.jpg"
-  );
+  ];
+
+  const totalImages = images.length;
 
   useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    if (carousel.current) {
+      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    }
+  }, []);
 
-    const timeoutId = setTimeout(() => {
+  useEffect(() => {
+    const animate = async () => {
+      for (let i = 0; i < totalImages; i++) {
+        await controls.start({
+          x: -(i * (width / totalImages)),
+          transition: { duration: 2, ease: "linear" },
+        });
+      }
       controls.start({
-        x: direction * width,
-        transition: { duration: 5, ease: "linear" },
+        x: 0,
+        transition: { duration: 0 },
       });
-      setDirection(-direction);
-    }, 5000);
-
-    return () => clearTimeout(timeoutId);
-  }, [direction, width]);
+      animate();
+    };
+    animate();
+  }, [width]);
 
   return (
     <div className="w-full h-auto">
       <h1 className="my-16 text-center font-bold text-2xl">
-        Nasze grono zadowolnych Kursantów{" "}
+        Nasze grono zadowolonych Kursantów{" "}
       </h1>
-      <div className="absolute z-[0] m-0 mx-0 mt-5 w-full sm:mx-4 ">
+      <div className="relative z-0 m-0 mx-0 mt-5 w-full sm:mx-4 ">
         <motion.div
           ref={carousel}
           whileTap={{ cursor: "grabbing" }}
           className="cursor-grab overflow-hidden bg-transparent"
         >
-          <motion.div
-            animate={controls}
-            drag="x"
-            dragConstraints={{ right: 0, left: -width }}
-            className="flex bg-transparent"
-          >
+          <motion.div animate={controls} className="flex bg-transparent">
             {images.map((image, i) => {
               return (
                 <motion.div key={i} className="min-h-[10rem] w-[40%] p-[0px]">
@@ -86,16 +80,3 @@ const Carousel: FC<SlaiderProps> = ({}) => {
 };
 
 export default Carousel;
-
-// export default Carousel;
-{
-  /* <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: "url(/bg.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          opacity: 0.5,
-        }}
-      /> */
-}

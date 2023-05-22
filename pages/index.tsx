@@ -8,7 +8,7 @@ import Contsct from "@/components/Contsct";
 import Gallery from "@/components/Gallery";
 import Food from "@/components/Food";
 import KatA from "@/components/KatA";
-import Steps from "@/components/W5krokach";
+import FiveSteps from "@/components/FiveSteps";
 import Carousel from "@/components/Slaider";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +23,7 @@ export default function Home() {
 
       <Gallery />
       {/* <KatA /> */}
-      <Steps />
+      <FiveSteps />
       <Carousel />
     </main>
   );
