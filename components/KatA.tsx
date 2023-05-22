@@ -1,5 +1,7 @@
 import Head from "next/head";
+import Image from "next/image";
 import { FC } from "react";
+import { a } from "react-spring";
 
 interface KatAProps {}
 const Card = ({ title, children, imgSrc }: any) => (
@@ -10,7 +12,7 @@ const Card = ({ title, children, imgSrc }: any) => (
     }}
   >
     <div className="md:flex">
-      <div className="md:flex-shrink-0 flex h-48 items-center justify-center my-auto md:h-3/4 md:w-48 max-h-[340px] ">
+      <div className="hidden md:flex-shrink-0 h-48 items-center justify-center my-auto md:h-3/4 md:w-48 max-h-[340px] ">
         <img
           className=" w-[90%] h-full object-cover  rounded-md"
           src={imgSrc}
@@ -29,7 +31,7 @@ const Card = ({ title, children, imgSrc }: any) => (
 
 const KatA: FC<KatAProps> = ({}) => {
   return (
-    <div className="font-sans ring-1 ring-grey-400 m-7  rounded-3xl text-gray-900 antialiased bg-gray-100 min-h-screen">
+    <div className="font-sans ring-1 ring-grey-400 p-2 m-1 sm:m-7  rounded-3xl text-gray-900 antialiased bg-gray-100 min-h-screen">
       <Head>
         <title>Kategoria B</title>
         <meta name="description" content="Informacje o kursie kategorii B" />
@@ -37,16 +39,24 @@ const KatA: FC<KatAProps> = ({}) => {
       </Head>
       <h1 className="text-4xl text-center font-bold mb-4">Kategoria B</h1>
       <div className="lg:flex w-full h-full">
-        <div className="w-1/2 flex flex-col ">
-          <img
+        <div className=" w-full lg:w-1/2 flex flex-col ">
+          <Image
+            width={500}
+            height={300}
             className=" w-3/4 h-52 mx-auto object-cover  rounded-md"
             src="/car-szkola.png"
             alt="/car-szkola1.png"
           />
-          <div className=" mt-10 text-xl ml-2 uppercase tracking-wide  text-black font-semibold ">
+          <div className="sm:ml-20 mt-10 text-xl  uppercase tracking-wide  text-red-600 font-semibold ">
+            <del className="text-black">2600 zł</del>
+            {"  "} Cena wakacyjna 2200 zł
+            <br />
+            (pierwsze 10 osób)
+          </div>
+          <div className="sm:ml-20 mt-10 text-xl  uppercase tracking-wide  text-black font-semibold ">
             W cenie kursu wliczone są:
           </div>
-          <div className="mt-2 ml-4  ">
+          <div className="sm:ml-20 mt-2   ">
             <ul className="list-disc pl-5 mb-4 text-gray-500 ">
               <li className="">Materiały szkoleniowe</li>
               <li>Teoria 30h</li>
@@ -61,10 +71,10 @@ const KatA: FC<KatAProps> = ({}) => {
               <li className="font-bold">Jazdy dodatkowe pakiet 10h/700 zł</li>
             </ul>
           </div>
-          <div className=" mt-10 text-xl ml-2 uppercase tracking-wide text-start  text-black font-semibold ">
+          <div className="sm:ml-20 mt-10 text-xl  uppercase tracking-wide text-start  text-black font-semibold ">
             Raty:
           </div>
-          <div className="mt-2 ml-4  ">
+          <div className="sm:ml-20 mt-2   ">
             <ul className="list-disc pl-5 mb-4  text-gray-500 ">
               <li>
                 Raty 0% - przez czas trwania kursu I rata - 600 zł przed
@@ -85,21 +95,7 @@ const KatA: FC<KatAProps> = ({}) => {
             </ul>
           </div>
         </div>
-        <div className="container w-1/2 mx-auto p-6">
-          {/* <Card title="W cenie kursu wliczone są:" imgSrc="/car-szkola1.png">
-            <ul className="list-disc pl-5 mb-4">
-              <li>Materiały szkoleniowe</li>
-              <li>Teoria 30h</li>
-              <li>Praktyka 30h</li>
-              <li>Egzamin wewnętrzny teoretyczny i praktyczny</li>
-              <li>
-                Szkolenie z zakresu pierwszej pomocy z możliwością praktyk
-              </li>
-              <li>Konsultacje z instruktorem - wykładowcą</li>
-              <li>Ubezpieczenie NNW</li>
-            </ul>
-          </Card> */}
-
+        <div className="container lg:w-1/2  w-full mx-auto p-6">
           <Card title="To oferujemy:" imgSrc="/logo2.png">
             <ul className="list-disc pl-5 mb-4">
               <li>
@@ -141,3 +137,19 @@ const KatA: FC<KatAProps> = ({}) => {
 };
 
 export default KatA;
+
+{
+  /* <Card title="W cenie kursu wliczone są:" imgSrc="/car-szkola1.png">
+            <ul className="list-disc pl-5 mb-4">
+              <li>Materiały szkoleniowe</li>
+              <li>Teoria 30h</li>
+              <li>Praktyka 30h</li>
+              <li>Egzamin wewnętrzny teoretyczny i praktyczny</li>
+              <li>
+                Szkolenie z zakresu pierwszej pomocy z możliwością praktyk
+              </li>
+              <li>Konsultacje z instruktorem - wykładowcą</li>
+              <li>Ubezpieczenie NNW</li>
+            </ul>
+          </Card> */
+}

@@ -9,8 +9,8 @@ interface ContsctProps {}
 const Contsct: FC<ContsctProps> = ({}) => {
   return (
     <section className="h-auto w-full lg:flex ">
-      <div className="relative mx-auto lg:w-1/2 w-4/5 px-20  flex h-auto max-w-5xl items-start bg-white  sm:px-10  lg:px-0 24 2xl:h-[100vh]">
-        <div className="pl-20 pt-20">
+      <div className="relative mx-auto lg:w-1/2 w-full p-2   flex h-auto max-w-5xl items-start bg-white  sm:px-10  lg:px-0 24 2xl:h-[100vh]">
+        <div className="pt-20">
           <h1 className="mb-4 ml-6  text-4xl font-bold">
             Skontaktuj się z nami!
           </h1>
@@ -21,8 +21,6 @@ const Contsct: FC<ContsctProps> = ({}) => {
           </p>
           <div className="mb-4 ml-6 flex flex-col items-start ">
             <div className="my-3 flex items-center justify-center font-bold">
-              {/* <FiMapPin className="mr-2 text-2xl" /> */}
-              {/* <span>ul. Osiedlowa 17, 09-227 Gójsk</span> */}
               P.H.U. Strażak Bartosz Graboń
             </div>
 

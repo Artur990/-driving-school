@@ -25,8 +25,6 @@ export default function Home() {
       {/* <KatA /> */}
       <Steps />
       <Carousel />
-      {/* <Contsct /> */}
-      {/* <Food /> */}
     </main>
   );
 }

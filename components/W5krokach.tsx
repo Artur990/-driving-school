@@ -12,19 +12,19 @@ const Step = ({ icon, title, description }: any) => {
   });
 
   return (
-    <div className="w-full mx-auto sm:w-1/2 p-5">
+    <div className="w-full  h-auto mx-auto lg:w-2/3 p-5 sm:p-7 text-white">
       <div className="flex items-start justify-between cursor-pointer mb-4">
-        <div className="relative flex items-center space-x-2">
+        <div className="relative flex items-start space-x-2">
           <animated.div
             style={expand}
-            className={`absolute w-1 bg-red-300 left-4 top-14 transform -translate-y-1/2 ${
-              open ? "top-[110px] " : ""
+            className={`absolute w-1 bg-red-600 left-4 top-14 transform -translate-y-1/2 ${
+              open ? "top-[170px] sm:top-[120px] " : ""
             }`}
           />
           <h1 className="w-10 h-10 relative z-10  font-extrabold text-3xl">
             {icon}
           </h1>
-          <h3 className="text-lg">{title}</h3>
+          <h3 className="sm:text-lg text-2xl">{title}</h3>
         </div>
         <FaChevronDown
           className={`w-6 h-6 transform transition-transform duration-200 ${
@@ -37,7 +37,7 @@ const Step = ({ icon, title, description }: any) => {
         ref={descriptionRef}
         className={`overflow-hidden ${open ? "" : "h-0"}`}
       >
-        <div className="px-10 text-sm">{description}</div>
+        <div className="px-10 text-xl">{description}</div>
       </div>
     </div>
   );
@@ -77,8 +77,8 @@ export default function Steps() {
   ];
 
   return (
-    <div>
-      <h1 className="text-center relative z-10 text-xl p-10 font-extrabold">
+    <div className=" bg-zinc-800 py-10 min-w-[420px]">
+      <h1 className="text-center relative z-10 text-xl p-10 text-white font-extrabold">
         Prawo jazdy w 5 krokach
       </h1>
       {steps.map((step, index) => (
