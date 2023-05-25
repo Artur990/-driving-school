@@ -1,4 +1,4 @@
-            ### VndrewStudio is commercial project for my friend Andrew.
+                                VndrewStudio is commercial project for my friend Andrew.
 ## Project Overview 🎉
 It's my commercial project realized for VndrewStudio.Both the website design (prepared in Figma) and all the code was made by me.
 
