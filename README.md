@@ -1,15 +1,14 @@
-
+            ### VndrewStudio is commercial project for my friend Andrew.
 ## Project Overview 🎉
 It's my commercial project realized for VndrewStudio.Both the website design (prepared in Figma) and all the code was made by me.
 
 ## Tech/framework used 🔧
 * react
-+ next.js
-## Getting Started
-
-First, run the development server:
+* next.js
+## Installation 💾
 
 ```bash
+git clone https://github.com/Artur990/-driving-school.git
 npm run dev
 # or
 yarn dev
