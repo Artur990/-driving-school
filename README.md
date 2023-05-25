@@ -1,8 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
 ## Project Overview 🎉
 It's my commercial project realized for VndrewStudio.Both the website design (prepared in Figma) and all the code was made by me.
+
 ## Tech/framework used 🔧
-.react
+*react
++next.js
 ## Getting Started
 
 First, run the development server:
