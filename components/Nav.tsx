@@ -14,6 +14,17 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [openMobile, SetIsOpenMobile] = useState(false);
   const route = useRouter();
+
+  const handleNavigation = (target: string, href: string) => {
+    if (window.location.pathname === "/") {
+      const element = document.getElementById(target);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.location.href = href + "?section=" + target;
+    }
+  };
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -21,7 +32,7 @@ export default function Nav() {
     SetIsOpenMobile(!openMobile);
   };
   return (
-    <header className=" relative z-40 bg-white">
+    <header onClick={toggleMenu} className=" relative z-40 bg-white">
       <nav
         className="mx-auto w-full h-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -108,10 +119,13 @@ export default function Nav() {
                       <a href="#" className="block font-semibold text-gray-900">
                         Kat. B<span className="absolute inset-0"></span>
                       </a>
-                      <p className="mt-1 text-gray-600">Toyota</p>
+                      <p className="mt-1 text-gray-600">Toyota Auris, Nissan</p>
                     </div>
                   </Link>
-                  <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                  <Link
+                    href="/katA"
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                  >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <FaMotorcycle className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
                     </div>
@@ -120,10 +134,16 @@ export default function Nav() {
                         Kat. AM, A1, A2, A
                         <span className="absolute inset-0"></span>
                       </a>
-                      <p className="mt-1 text-gray-600">Yamaha</p>
+                      <p className="mt-1 text-gray-600">
+                        Yamaha MT07 i YBR 125, BMW G310R, Volcano 50
+                      </p>
                     </div>
-                  </div>
-                  <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                  </Link>
+
+                  <Link
+                    href="/katC-E"
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                  >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <FaTruckMoving className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
                     </div>
@@ -133,8 +153,12 @@ export default function Nav() {
                       </a>
                       <p className="mt-1 text-gray-600">Man</p>
                     </div>
-                  </div>
-                  <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                  </Link>
+
+                  <Link
+                    href="/katD"
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                  >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <FaBusAlt className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
                     </div>
@@ -144,21 +168,21 @@ export default function Nav() {
                       </a>
                       <p className="mt-1 text-gray-600">Autobus</p>
                     </div>
-                  </div>
+                  </Link>
                 </div>
                 <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                  <a
-                    href="#"
+                  <div
+                    onClick={() => handleNavigation("gallery", "/")}
                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                   >
                     <GrGallery />
                     Galeria
-                  </a>
-                  <a
-                    href="#"
+                  </div>
+                  <div
+                    onClick={() => handleNavigation("five-steps", "/")}
                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                   >
-                    <svg
+                    {/* <svg
                       className="h-5 w-5 flex-none text-gray-400"
                       viewBox="0 0 20 20"
                       fill="currentColor"
@@ -169,9 +193,10 @@ export default function Nav() {
                         d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"
                         clip-rule="evenodd"
                       />
-                    </svg>
-                    KONTAKT
-                  </a>
+                    </svg> */}
+                    {/* KONTAKT */}
+                    Prawo jazdy w 5 ktrokach
+                  </div>
                 </div>
               </div>
             )}

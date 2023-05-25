@@ -24,7 +24,7 @@ const Gallery = () => {
   }
 
   return (
-    <div className="container mx-auto p-4 my-16 sm:p-6 lg:p-8">
+    <div id="gallery" className="container mx-auto p-4 sm:p-6 lg:p-8">
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-fr">
         {images.map((img, index) => (
           <div
@@ -59,8 +59,8 @@ const Gallery = () => {
         <Image
           width={600}
           height={600}
-          alt="img"
           src={selectedImg}
+          alt="photo"
           className="max-h-full max-w-full"
         />
       </Modal>

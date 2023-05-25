@@ -1,155 +1,136 @@
 import Head from "next/head";
 import Image from "next/image";
-import { FC } from "react";
-import { a } from "react-spring";
-
+import { FC, useState } from "react";
+import { FaBusAlt, FaCar, FaMotorcycle, FaTruckMoving } from "react-icons/fa";
+import KatACart from "./A/KatACart";
+import KatAmCart from "./A/KatAmCart";
+import KatA1Cart from "./A/KatA1Cart";
+import KatA2Cart from "./A/KatA2Cart";
+// import KatACart form '../components/A/KatACart'
 interface KatAProps {}
-const Card = ({ title, children, imgSrc }: any) => (
-  <div
-    className="w-[90%] max-w-md rounded-xl overflow-hidden md:max-w-2xl m-4 transform hover:scale-105 transition-transform duration-200 ease-in-out"
-    style={{
-      boxShadow: "0px 0px 10px 0px #393e46",
-    }}
-  >
-    <div className="md:flex">
-      <div className="hidden md:flex-shrink-0 h-48 items-center justify-center my-auto md:h-3/4 md:w-48 max-h-[340px] ">
-        <img
-          className=" w-[90%] h-full object-cover  rounded-md"
-          src={imgSrc}
-          alt={title}
-        />
-      </div>
-      <div className="p-8">
-        <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold ">
-          {title}
-        </div>
-        <div className="mt-2 text-gray-500">{children}</div>
-      </div>
-    </div>
-  </div>
-);
 
 const KatA: FC<KatAProps> = ({}) => {
+  const [activeTab, setActiveTab] = useState("A");
   return (
-    <div className="font-sans ring-1 ring-grey-400 p-2 m-1 sm:m-7  rounded-3xl text-gray-900 antialiased bg-gray-100 min-h-screen">
+    <div>
       <Head>
-        <title>Kategoria B</title>
-        <meta name="description" content="Informacje o kursie kategorii B" />
+        <title>Kategoria A</title>
+        <meta name="description" content="Informacje o kursie kategorii A" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="text-4xl text-center font-bold mb-4">Kategoria B</h1>
-      <div className="lg:flex w-full h-full">
-        <div className=" w-full lg:w-1/2 flex flex-col ">
-          <Image
-            width={500}
-            height={300}
-            className=" w-3/4 h-52 mx-auto object-cover  rounded-md"
-            src="/car-szkola.png"
-            alt="/car-szkola1.png"
-          />
-          <div className="sm:ml-20 mt-10 text-xl  uppercase tracking-wide  text-red-600 font-semibold ">
-            <del className="text-black">2600 zł</del>
-            {"  "} Cena wakacyjna 2200 zł
-            <br />
-            (pierwsze 10 osób)
-          </div>
-          <div className="sm:ml-20 mt-10 text-xl  uppercase tracking-wide  text-black font-semibold ">
-            W cenie kursu wliczone są:
-          </div>
-          <div className="sm:ml-20 mt-2   ">
-            <ul className="list-disc pl-5 mb-4 text-gray-500 ">
-              <li className="">Materiały szkoleniowe</li>
-              <li>Teoria 30h</li>
-              <li>Praktyka 30h</li>
-              <li>Egzamin wewnętrzny teoretyczny i praktyczny</li>
-              <li>
-                Szkolenie z zakresu pierwszej pomocy z możliwością praktyk
-              </li>
-              <li>Konsultacje z instruktorem - wykładowcą</li>
-              <li>Ubezpieczenie NNW</li>
-              <li className="font-bold">Jazdy dodatkowe 1h/80 zł</li>
-              <li className="font-bold">Jazdy dodatkowe pakiet 10h/700 zł</li>
-            </ul>
-          </div>
-          <div className="sm:ml-20 mt-10 text-xl  uppercase tracking-wide text-start  text-black font-semibold ">
-            Raty:
-          </div>
-          <div className="sm:ml-20 mt-2   ">
-            <ul className="list-disc pl-5 mb-4  text-gray-500 ">
-              <li>
-                Raty 0% - przez czas trwania kursu I rata - 600 zł przed
-                rozpoczęciem
-              </li>
-              <li>
-                {" "}
-                zajęć teoretycznych, II rata - 600 zł przed rozpoczęciem zajęć
-              </li>
-              <li>
-                praktycznych III rata - 500 zł po wyjeżdżeniu 10 godzin zajęć
-              </li>
-              <li>
-                {" "}
-                praktycznych IV rata - 500 zł po wyjeżdżeniu 20 godzin zajęć
-                praktycznych
-              </li>
-            </ul>
-          </div>
+      <div className="mx-auto max-w-2xl sm:text-center">
+        <div className="flex items-center justify-center">
+          <img className="h-20 w-28" src="/logo.jpg" alt="logo" />
         </div>
-        <div className="container lg:w-1/2  w-full mx-auto p-6">
-          <Card title="To oferujemy:" imgSrc="/logo2.png">
-            <ul className="list-disc pl-5 mb-4">
-              <li>
-                Asfaltowy, oświetlony plac manewrowy, największy w Bydgoszczy!
-              </li>
-              <li>
-                Skuteczne metody szkolenia opracowane przez instruktorów i
-                pedagogów potwierdzone wysoką zdawalnością egzaminów
-              </li>
-              <li>
-                Możliwość wyboru dogodnych godzin jazd szkoleniowych (jazdy
-                prowadzone są także w soboty, niedziele oraz w godzinach
-                wieczornych)
-              </li>
-              <li>
-                Jazdy zaczynamy i kończymy w dogodnym miejscu - przy rondzie
-                fordońskim (węzeł komunikacyjny)
-              </li>
-            </ul>
-          </Card>
+        <h2 className="text-3xl text-center font-bold tracking-tight text-red-600 sm:text-4xl">
+          Szkoła jazdy Strażak
+        </h2>
+        <p className="mt-6 text-lg leading-8 font-bold text-gray-700">
+          W naszej szkole stawiamy na nowoczesne metody nauczania, aby zapewnić
+          naszym klientom jak najwyższą jakość edukacji. Dlatego też, zajęcia
+          teoretyczne przeprowadzane są przy użyciu najnowszych materiałów
+          dydaktycznych oraz innowacyjnych metod, które umożliwiają skuteczne
+          przyswajanie wiedzy. Ponadto, we współpracy z Polskim Związkiem
+          Motorowym, posiadamy dodatkowe możliwości, które pozwalają nam
+          wprowadzać najnowsze rozwiązania edukacyjne. Dzięki temu możemy
+          zapewnić naszym uczniom kompleksową i efektywną naukę jazdy. Oprócz
+          tradycyjnych zajęć stacjonarnych, oferujemy także metodę
+          e-learningową. Dostęp do bazy pytań egzaminacyjnych oraz wykładów w
+          trybie zdalnym umożliwia naszym klientom naukę w dogodnym dla siebie
+          czasie i miejscu. To szczególnie ważne dla osób, które mają napięty
+          grafik lub mieszkają daleko od szkoły jazdy. Nasze zajęcia praktyczne
+          odbywają się na najnowszych motocyklach marki Yamaha MT07, BMW G310 R,
+          Yamaha YBR125 oraz Volcano 50. Dzięki temu nasi uczniowie uczą się
+          jazdy na sprzęcie wysokiej jakości, co pozwala na bezpieczne i
+          skuteczne doskonalenie umiejętności. Korzystamy ze zmodernizowanego
+          placu (Kartodrom) przy ulicy Fordońskiej 116, który jest idealnym
+          miejscem do nauki jazdy na motocyklu. Jest to przestrzeń wyposażona w
+          nowoczesne urządzenia, pozwalające na bezpieczną naukę jazdy. Jeśli
+          chcesz nauczyć się jazdy na motocyklu w bezpieczny i skuteczny sposób,
+          nasza szkoła to idealne miejsce dla Ciebie.
+        </p>
+        <div className="flex flex-col items-center justify-start py-10 p5x- ">
+          <ul className="space-y-4">
+            <li className="font-medium text-gray-800">
+              <span className="font-bold">Kategoria AM</span> - minimalny wiek:
+              14 lat. Pozwala na kierowanie pojazdami o pojemności do 50 cm³ lub
+              o mocy do 4 kW.
+            </li>
+            <li className="font-medium text-gray-800">
+              <span className="font-bold">Kategoria A1</span> - minimalny wiek:
+              16 lat. Pozwala na kierowanie motocyklem o pojemności do 125 cm³ i
+              mocy do 11 kW.
+            </li>
+            <li className="font-medium text-gray-800">
+              <span className="font-bold">Kategoria A2</span> - minimalny wiek:
+              18 lat. Pozwala na kierowanie motocyklem o mocy do 35 kW.
+              {/* Możliwość zdobycia, jeżeli posiadane jest prawo jazdy kategorii
+              A1. */}
+            </li>
+            <li className="font-medium text-gray-800">
+              <span className="font-bold">Kategoria A</span> - minimalny wiek:
+              24 lata. Pozwala na kierowanie motocyklem bez ograniczeń mocy.
+            </li>
+            <li className="font-medium text-gray-800">
+              <span className="font-bold">Kategoria A</span> - minimalny wiek:
+              20 lat, ale tylko dla osób posiadających prawo jazdy kategorii A2
+              od minimum 2 lat. Pomimo niższego wieku, możliwość kierowania
+              motocyklem bez ograniczeń mocy.
+            </li>
+          </ul>
+          {/* </div> */}
+        </div>
 
-          <Card title="Badanie lekarskie:" imgSrc="/badania-lekarskie.jpg">
-            <p className="mb-4">
-              Cena kursu nie obejmuje badania lekarskiego. Istnieje możliwość
-              wykonania takiego badania w naszym OSK. W celu wyznaczenia terminu
-              badania oraz umówienia wizyty w naszym ośrodku prosimy o kontakt
-              telefoniczny z naszym biurem. Koszt badania lekarskiego dla osób,
-              które zapiszą się na
-            </p>
-            <p>
-              Opłata za badanie przyjmowana jest przez lekarza w formie gotówki
-              lub karty płatniczej.
-            </p>
-          </Card>
+        <div className="flex justify-center space-x-4 m-4">
+          <div
+            onClick={() => setActiveTab("AM")}
+            className={`border-b-4 ${
+              activeTab === "AM" ? "border-red-500" : "border-gray-300"
+            }`}
+          >
+            <div className="h-10 w-10 text-gray-600 hover:text-indigo-600 cursor-pointer font-black text-2xl ">
+              AM
+            </div>
+          </div>
+          <div
+            onClick={() => setActiveTab("A1")}
+            className={`border-b-4 ${
+              activeTab === "A1" ? "border-red-500" : "border-gray-300"
+            }`}
+          >
+            <div className="h-10 w-10 text-gray-600 hover:text-indigo-600 cursor-pointer font-black text-2xl ">
+              A1
+            </div>
+          </div>
+          <div
+            onClick={() => setActiveTab("A2")}
+            className={`border-b-4 ${
+              activeTab === "A2" ? "border-red-500" : "border-gray-300"
+            }`}
+          >
+            <div className="h-10 w-10 text-gray-600 hover:text-indigo-600 cursor-pointer font-black text-2xl ">
+              A2
+            </div>
+          </div>
+          <div
+            onClick={() => setActiveTab("A")}
+            className={`border-b-4 ${
+              activeTab === "A" ? "border-red-500" : "border-gray-300"
+            }`}
+          >
+            <div className="h-10 w-10 text-gray-600 hover:text-indigo-600 cursor-pointer font-black text-2xl ">
+              A
+            </div>
+          </div>
         </div>
       </div>
+      {activeTab === "A" && <KatACart />}
+      {activeTab === "AM" && <KatAmCart />}
+      {activeTab === "A1" && <KatA1Cart />}
+      {activeTab === "A2" && <KatA2Cart />}
+      {/* <KatACart /> */}
     </div>
   );
 };
 
 export default KatA;
-
-{
-  /* <Card title="W cenie kursu wliczone są:" imgSrc="/car-szkola1.png">
-            <ul className="list-disc pl-5 mb-4">
-              <li>Materiały szkoleniowe</li>
-              <li>Teoria 30h</li>
-              <li>Praktyka 30h</li>
-              <li>Egzamin wewnętrzny teoretyczny i praktyczny</li>
-              <li>
-                Szkolenie z zakresu pierwszej pomocy z możliwością praktyk
-              </li>
-              <li>Konsultacje z instruktorem - wykładowcą</li>
-              <li>Ubezpieczenie NNW</li>
-            </ul>
-          </Card> */
-}

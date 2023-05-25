@@ -1,4 +1,4 @@
-import KatA from "@/components/KatB";
+import KatA from "@/components/KatA";
 import { FC } from "react";
 
 interface indexProps {}

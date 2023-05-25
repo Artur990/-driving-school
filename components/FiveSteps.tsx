@@ -77,7 +77,7 @@ export default function FiveSteps() {
   ];
 
   return (
-    <div className=" bg-zinc-800 py-10 min-w-[420px]">
+    <div id="five-steps" className=" bg-zinc-800 py-10 min-w-[420px]">
       <h1 className="text-center relative z-9 text-xl p-10 text-white font-extrabold">
         Prawo jazdy w 5 krokach
       </h1>

@@ -27,7 +27,7 @@ const Form: FC<FormProps> = ({}) => {
               name="firstName"
               id="firstName"
               autoComplete="given-name"
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             />
             {/* {formik.touched.firstName && formik.errors.firstName && (
               <div className="text-red-600">{formik.errors.firstName}</div>
@@ -50,7 +50,7 @@ const Form: FC<FormProps> = ({}) => {
               name="lastName"
               id="lastName"
               autoComplete="family-name"
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md  border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             />
             {/* {formik.touched.lastName && formik.errors.lastName && (
               <div className="text-red-600">{formik.errors.lastName}</div>
@@ -73,7 +73,7 @@ const Form: FC<FormProps> = ({}) => {
               name="email"
               id="email"
               autoComplete="email"
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0   px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             />
             {/* {formik.touched.email && formik.errors.email && ( */}
             {/* <div className="text-red-600">{formik.errors.email}</div> */}
@@ -83,7 +83,7 @@ const Form: FC<FormProps> = ({}) => {
         <div className="sm:col-span-2">
           <label
             htmlFor="phone-number"
-            className="block text-sm font-semibold leading-6 text-gray-900"
+            className="block text-sm font-semibold ring-indigo-600 leading-6 text-gray-900"
           >
             Numer telefonu
           </label>
@@ -96,7 +96,7 @@ const Form: FC<FormProps> = ({}) => {
               name="phoneNumber"
               id="phoneNumber"
               autoComplete="phoneNumber"
-              className="block w-full rounded-md border-0 px-3.5 py-2 pl-4   text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0  px-3.5 py-2 pl-4   text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             />
             {/* {formik.touched.phoneNumber && formik.errors.phoneNumber && (
               <div className="text-red-600">{formik.errors.phoneNumber}</div>
@@ -118,7 +118,7 @@ const Form: FC<FormProps> = ({}) => {
               name="message"
               id="message"
               rows={4}
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md  border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             />
             {/* {formik.touched.message && formik.errors.message && (
               <div className="text-red-600">{formik.errors.message}</div>

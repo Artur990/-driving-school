@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FC } from "react";
 import { useState } from "react";
 import { FaCar, FaMotorcycle, FaTruckMoving, FaBusAlt } from "react-icons/fa";
@@ -76,7 +77,13 @@ const Ofert = () => {
                 możliwości. Nasze elastyczne harmonogramy, nowoczesne metody
                 nauczania i konkurencyjne ceny sprawiają, że jest to idealny
                 moment, aby podjąć decyzję. Zapisz się już dzisiaj i zacznij
-                swoją drogę do samodzielnej jazdy!
+                swoją drogę do samodzielnej jazdy!{" "}
+                <Link
+                  href="katB"
+                  className="text-red-500 text-lg font-semibold"
+                >
+                  Więcej szegółów..
+                </Link>
               </p>
               <div className="mt-10 flex items-center gap-x-4">
                 <h4 className="flex-none text-sm  leading-6 text-black-600 font-bold">
@@ -198,7 +205,13 @@ const Ofert = () => {
                 możliwości. Nasze elastyczne harmonogramy, nowoczesne metody
                 nauczania i konkurencyjne ceny sprawiają, że jest to idealny
                 moment, aby podjąć decyzję. Zapisz się już dzisiaj i zacznij
-                swoją drogę do samodzielnej jazdy!
+                swoją drogę do samodzielnej jazdy!{" "}
+                <Link
+                  href="katA"
+                  className="text-red-500 text-lg font-semibold"
+                >
+                  Więcej szegółów..
+                </Link>
               </p>
               <div className="mt-10 flex items-center gap-x-4">
                 <h4 className="flex-none text-sm  leading-6 text-red-600 font-bold">
@@ -320,7 +333,13 @@ const Ofert = () => {
                 możliwości. Nasze elastyczne harmonogramy, nowoczesne metody
                 nauczania i konkurencyjne ceny sprawiają, że jest to idealny
                 moment, aby podjąć decyzję. Zapisz się już dzisiaj i zacznij
-                swoją drogę do samodzielnej jazdy!
+                swoją drogę do samodzielnej jazdy!{" "}
+                <Link
+                  href="katC-E"
+                  className="text-red-500 text-lg font-semibold"
+                >
+                  Więcej szegółów..
+                </Link>
               </p>
               <div className="mt-10 flex items-center gap-x-4">
                 <h4 className="flex-none text-sm  leading-6 text-black font-bold">
@@ -442,7 +461,13 @@ const Ofert = () => {
                 możliwości. Nasze elastyczne harmonogramy, nowoczesne metody
                 nauczania i konkurencyjne ceny sprawiają, że jest to idealny
                 moment, aby podjąć decyzję. Zapisz się już dzisiaj i zacznij
-                swoją drogę do samodzielnej jazdy!
+                swoją drogę do samodzielnej jazdy!{" "}
+                <Link
+                  href="katD"
+                  className="text-red-500 text-lg font-semibold"
+                >
+                  Więcej szegółów..
+                </Link>
               </p>
               <div className="mt-10 flex items-center gap-x-4">
                 <h4 className="flex-none text-sm  leading-6 text-red-600 font-bold">
