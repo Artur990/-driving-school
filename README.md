@@ -3,8 +3,8 @@
 It's my commercial project realized for VndrewStudio.Both the website design (prepared in Figma) and all the code was made by me.
 
 ## Tech/framework used 🔧
-*react
-+next.js
+* react
++ next.js
 ## Getting Started
 
 First, run the development server:
