@@ -10,53 +10,29 @@ const Form: FC<FormProps> = ({}) => {
       method="POST"
       className="mx-auto mt-1 max-w-xl sm:mt-20"
     >
-      <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-        <div>
-          <label
-            htmlFor="first-name"
-            className="block text-sm font-semibold leading-6 text-gray-900"
-          >
-            Imie
-          </label>
-          <div className="mt-2.5">
-            <input
-              //   onChange={formik.handleChange}
-              //   value={formik.values.firstName}
-              placeholder="Imię"
-              type="text"
-              name="firstName"
-              id="firstName"
-              autoComplete="given-name"
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-            />
-            {/* {formik.touched.firstName && formik.errors.firstName && (
+      <div className="sm:col-span-2">
+        <label
+          htmlFor="first-name"
+          className="block text-sm font-semibold leading-6 text-gray-900"
+        >
+          Imiei Nazwisko
+        </label>
+        <div className="mt-2.5">
+          <input
+            //   onChange={formik.handleChange}
+            //   value={formik.values.firstName}
+            placeholder="Imię"
+            type="text"
+            name="firstName"
+            id="firstName"
+            autoComplete="given-name"
+            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          />
+          {/* {formik.touched.firstName && formik.errors.firstName && (
               <div className="text-red-600">{formik.errors.firstName}</div>
             )} */}
-          </div>
         </div>
-        <div>
-          <label
-            htmlFor="last-name"
-            className="block text-sm font-semibold leading-6 text-gray-900"
-          >
-            Nazwisko
-          </label>
-          <div className="mt-2.5">
-            <input
-              //   onChange={formik.handleChange}
-              //   value={formik.values.lastName}
-              placeholder="Nazwisko"
-              type="text"
-              name="lastName"
-              id="lastName"
-              autoComplete="family-name"
-              className="block w-full rounded-md  border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-            />
-            {/* {formik.touched.lastName && formik.errors.lastName && (
-              <div className="text-red-600">{formik.errors.lastName}</div>
-            )} */}
-          </div>
-        </div>
+
         <div className="sm:col-span-2">
           <label
             htmlFor="email"

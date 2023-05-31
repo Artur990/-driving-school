@@ -1,14 +1,14 @@
 import React, { useState, useRef } from "react";
 import { useSpring, animated } from "react-spring";
 import { FaChevronDown, FaCar } from "react-icons/fa";
-import { TbCircleNumber1 } from "react-icons/tb";
+import { CiFaceSmile } from "react-icons/ci";
 
 const Step = ({ icon, title, description }: any) => {
   const [open, setOpen] = useState(false);
   const descriptionRef = useRef<any>(null);
 
   const expand = useSpring({
-    height: open ? descriptionRef.current?.scrollHeight + 8 : 20,
+    height: open ? descriptionRef.current?.scrollHeight + 12 : 20,
   });
 
   return (
@@ -17,14 +17,14 @@ const Step = ({ icon, title, description }: any) => {
         <div className="relative flex items-start space-x-2">
           <animated.div
             style={expand}
-            className={`absolute w-1 bg-red-600 left-4 top-14 transform -translate-y-1/2 ${
+            className={`absolute w-1 bg-red-600 left-5 top-16 transform -translate-y-1/2 ${
               open ? "top-[170px] sm:top-[120px] " : ""
             }`}
           />
-          <h1 className="w-10 h-10 relative z-10  font-extrabold text-3xl">
+          <h1 className="w-10 h-10 relative z-10  font-extrabold text-5xl">
             {icon}
           </h1>
-          <h3 className="sm:text-lg text-2xl">{title}</h3>
+          <h3 className="sm:text-2xl text-2xl">{title}</h3>
         </div>
         <FaChevronDown
           className={`w-6 h-6 transform transition-transform duration-200 ${
@@ -77,13 +77,27 @@ export default function FiveSteps() {
   ];
 
   return (
-    <div id="five-steps" className=" bg-zinc-800 py-10 min-w-[420px]">
-      <h1 className="text-center relative z-9 text-xl p-10 text-white font-extrabold">
-        Prawo jazdy w 5 krokach
-      </h1>
-      {steps.map((step, index) => (
-        <Step key={index} {...step} />
-      ))}
-    </div>
+    <>
+      <div id="five-steps" className=" bg-zinc-800 py-10 min-w-[420px]">
+        <h1 className="text-center relative z-9 text-3xl  xl:text-4xl p-10 text-red-600 font-extrabold">
+          Prawo jazdy w 5 krokach
+        </h1>
+        {steps.map((step, index) => (
+          <Step key={index} {...step} />
+        ))}
+        <h2 className="text-white text-5xl text-center font-bold p-10 pt-32">
+          Wybierz mądrze i zdaj! Postaw na szkołę nauki jazdy, którą polecają
+          nasi kursanci!{" "}
+          <span className="relative top-2 inline-block ">
+            <CiFaceSmile className="ml-2 text-red-600 " />
+          </span>
+        </h2>
+      </div>
+      <div className="relative mt-20">
+        <div className="absolute left-1/2 transform -translate-x-1/2">
+          <div className="w-0 h-0 border-l-15 border-r-15 border-transparent border-b-30 border-solid border-red-500 bg-red-500"></div>
+        </div>
+      </div>
+    </>
   );
 }

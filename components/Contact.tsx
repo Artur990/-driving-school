@@ -6,11 +6,12 @@ import { BsArrowRightShort } from "react-icons/bs";
 import { TbBuildingSkyscraper } from "react-icons/tb";
 interface ContsctProps {}
 
-const Contsct: FC<ContsctProps> = ({}) => {
+const Contact: FC<ContsctProps> = ({}) => {
   return (
-    <section className="h-auto w-full  ">
-      <h2 className="hidden lg:block text-center mb-4 ml-6  text-red-600 text-4xl font-bold">
-        Skontaktuj się z nami!
+    <section className="h-auto w-full lg:p-10 ">
+      <h2 className="hidden lg:block text-center mb-1 ml-6 mt-10  text-3xl  xl:text-4xl font-extrabold">
+        Masz pytanie?
+        <br /> Skontaktuj się z nami!
       </h2>
       <div className="lg:flex">
         <div className="relative mx-auto lg:w-1/2 w-full p-2   flex h-auto max-w-5xl items-start bg-white  sm:px-10  lg:px-0 24 2xl:h-[100vh]">
@@ -20,8 +21,8 @@ const Contsct: FC<ContsctProps> = ({}) => {
             </h1>
             <p className="mb-8 ml-6 text-left text-xl">
               Skontaktuj się z nami, a odpowiemy na wszystkie Twoje pytania.
-              Wypełnij dane w formularzu, a odpiszemy jak najszybciej, jak to
-              tylko możliwe. Czekamy na kontakt!
+              Wypełnij dane w formularzu, a skontaktujemy się z Tobą jak
+              najszybciej, aby przedstawić szczegóły kursu! Czekamy na kontakt!
             </p>
             <div className="mb-4 ml-6 flex flex-col items-start ">
               <div className="my-3 flex items-center justify-center font-bold">
@@ -29,22 +30,22 @@ const Contsct: FC<ContsctProps> = ({}) => {
               </div>
 
               <div className="my-3 flex items-center justify-center">
-                <FiPhone className="mr-2 text-2xl" />
+                <FiPhone className="mr-2 text-2xl text-red-600" />
                 <span>+48 508 808 310 </span>
               </div>
               <div className="my-3 flex items-center justify-center">
-                <FiMail className="mr-2 text-2xl" />
+                <FiMail className="mr-2 text-2xl text-red-600" />
                 <span>sjstrazak@gmail.com </span>
               </div>
               <div className="my-3 flex items-center justify-center">
-                <TbBuildingSkyscraper className="mr-2 text-2xl" />
+                <TbBuildingSkyscraper className="mr-2 text-2xl text-red-600" />
                 <span>
                   <span className="font-bold">Teoria: </span>
                   Szkoła Podstawowa nr 14 przy ul. Żmudzka 12, Bydgoszcz
                 </span>
               </div>
               <div className="my-3 flex items-center justify-center">
-                <FiMapPin className="mr-2 text-2xl" />
+                <FiMapPin className="mr-2 text-2xl text-red-600" />
                 <span>
                   <span className="font-bold">Jazdy: </span>
                   Parking Biedronki ul. Gajowa 7, przy rondzie fordońskim
@@ -73,4 +74,4 @@ const Contsct: FC<ContsctProps> = ({}) => {
   );
 };
 
-export default Contsct;
+export default Contact;

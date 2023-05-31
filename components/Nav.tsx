@@ -8,21 +8,21 @@ import { GrGallery } from "react-icons/gr";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-interface NavProps {}
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [openMobile, SetIsOpenMobile] = useState(false);
-  const route = useRouter();
 
   const handleNavigation = (target: string, href: string) => {
     if (window.location.pathname === "/") {
       const element = document.getElementById(target);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
+        setIsOpen(false);
       }
     } else {
       window.location.href = href + "?section=" + target;
+      setIsOpen(false);
     }
   };
   const toggleMenu = () => {
@@ -32,7 +32,10 @@ export default function Nav() {
     SetIsOpenMobile(!openMobile);
   };
   return (
-    <header onClick={toggleMenu} className=" relative z-40 bg-white">
+    <header
+      // onClick={() => SetIsOpenMobile(false)}
+      className=" relative z-40 bg-white"
+    >
       <nav
         className="mx-auto w-full h-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -106,6 +109,7 @@ export default function Nav() {
                 <div className="p-4">
                   <Link
                     href="/katB"
+                    onClick={() => setIsOpen(false)}
                     // onClick={() => route("katB")}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                   >
@@ -116,24 +120,31 @@ export default function Nav() {
                       />
                     </div>
                     <div className="flex-auto">
-                      <a href="#" className="block font-semibold text-gray-900">
+                      <Link
+                        href="/katB"
+                        className="block font-semibold text-gray-900"
+                      >
                         Kat. B<span className="absolute inset-0"></span>
-                      </a>
+                      </Link>
                       <p className="mt-1 text-gray-600">Toyota Auris, Nissan</p>
                     </div>
                   </Link>
                   <Link
                     href="/katA"
+                    onClick={() => setIsOpen(false)}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                   >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <FaMotorcycle className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
                     </div>
                     <div className="flex-auto">
-                      <a href="#" className="block font-semibold text-gray-900">
+                      <Link
+                        href="/katA"
+                        className="block font-semibold text-gray-900"
+                      >
                         Kat. AM, A1, A2, A
                         <span className="absolute inset-0"></span>
-                      </a>
+                      </Link>
                       <p className="mt-1 text-gray-600">
                         Yamaha MT07 i YBR 125, BMW G310R, Volcano 50
                       </p>
@@ -142,59 +153,55 @@ export default function Nav() {
 
                   <Link
                     href="/katC-E"
+                    onClick={() => setIsOpen(false)}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                   >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <FaTruckMoving className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
                     </div>
                     <div className="flex-auto">
-                      <a href="#" className="block font-semibold text-gray-900">
+                      <Link
+                        href="/katC"
+                        className="block font-semibold text-gray-900"
+                      >
                         Kat. C, E<span className="absolute inset-0"></span>
-                      </a>
+                      </Link>
                       <p className="mt-1 text-gray-600">Man</p>
                     </div>
                   </Link>
 
                   <Link
                     href="/katD"
+                    onClick={() => setIsOpen(false)}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                   >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <FaBusAlt className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
                     </div>
                     <div className="flex-auto">
-                      <a href="#" className="block font-semibold text-gray-900">
+                      <Link
+                        href="/katD"
+                        className="block font-semibold text-gray-900"
+                      >
                         Kat, D<span className="absolute inset-0"></span>
-                      </a>
+                      </Link>
                       <p className="mt-1 text-gray-600">Autobus</p>
                     </div>
                   </Link>
                 </div>
                 <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                  <div
-                    onClick={() => handleNavigation("gallery", "/")}
+                  <Link
+                    href="/Galeria"
+                    onClick={() => setIsOpen(false)}
                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                   >
                     <GrGallery />
                     Galeria
-                  </div>
+                  </Link>
                   <div
                     onClick={() => handleNavigation("five-steps", "/")}
                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                   >
-                    {/* <svg
-                      className="h-5 w-5 flex-none text-gray-400"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"
-                        clip-rule="evenodd"
-                      />
-                    </svg> */}
-                    {/* KONTAKT */}
                     Prawo jazdy w 5 ktrokach
                   </div>
                 </div>
@@ -202,27 +209,40 @@ export default function Nav() {
             )}
           </div>
 
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link
+            href={"/Onas"}
+            // onClick={() => handleNavigation("Onas", "/")}
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             O NAS
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          </Link>
+          <Link
+            href="/Kontakt"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             KONTAKT
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          </Link>
+          <Link
+            href="Galeria"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             GALERIA
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          </Link>
+          <div
+            onClick={() => handleNavigation("co-nas-wyroznia", "/")}
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             CO NAS WYRÓŻNIA?
-          </a>
+          </div>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a
-            href="#"
+          <Link
+            href="/Zapiszsie"
             className="text-xs font-semibold leading-6 text-white bg-red-600 border-2 border-red-600 px-8 py-1 rounded"
             // style={{ height: "40px", width: "160px" }}
           >
             ZAPISZ SIĘ ONLINE
-          </a>
+          </Link>
         </div>
       </nav>
       {/* <!-- Mobile menu, show/hide based on menu open state. --> */}
@@ -235,10 +255,16 @@ export default function Nav() {
                 className="flex items-center justify-between"
                 onClick={toggleMenuMobile}
               >
-                <a href="#" className="-m-1.5 p-1.5">
-                  <span className="sr-only">Your Company</span>
-                  <img className="h-8 w-auto" src="/logo.jpg" alt="logo" />
-                </a>
+                <Link href="/" className="-m-1.5 p-1.5">
+                  <span className="sr-only">Szkoła jazdy strażak</span>
+                  <Image
+                    width={62}
+                    height={62}
+                    className="h-8 w-auto"
+                    src="/logo.jpg"
+                    alt="logo"
+                  />
+                </Link>
                 <button
                   onClick={toggleMenuMobile}
                   type="button"
@@ -292,60 +318,60 @@ export default function Nav() {
 
                       {isOpen && (
                         <div className="mt-2 space-y-2" id="disclosure-1">
-                          <a
-                            href="#"
+                          <Link
+                            href="/katB"
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             Kat. B
-                          </a>
-                          <a
-                            href="#"
+                          </Link>
+                          <Link
+                            href="/katA"
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             Kat. AM, A1, A2, A
-                          </a>
-                          <a
-                            href="#"
+                          </Link>
+                          <Link
+                            href="katC"
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             Kat. C, E
-                          </a>
-                          <a
-                            href="#"
+                          </Link>
+                          <Link
+                            href="/katD"
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             Kat, D
-                          </a>
+                          </Link>
                         </div>
                       )}
                     </div>
-                    <a
-                      href="#"
+                    <Link
+                      href="/Onas"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       O NAS
-                    </a>
-                    <a
-                      href="#"
+                    </Link>
+                    <Link
+                      href="/Kontakt"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       KONTAKT
-                    </a>
-                    <a
-                      href="#"
+                    </Link>
+                    <div
+                      onClick={() => handleNavigation("co-nas-wyroznia", "/")}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       CO NAS WYRÓŻNIA?
-                    </a>
+                    </div>
                   </div>
 
                   <div className="py-6">
-                    <a
-                      href="#"
+                    <Link
+                      href="Zapiszsie"
                       className="bg-red-700 text-white text-center -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7  hover:bg-gray-50"
                     >
                       ZAPISZ SIĘ ONILNE
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

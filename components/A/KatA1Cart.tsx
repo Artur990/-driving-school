@@ -51,17 +51,41 @@ const katA1Cart = ({}) => {
           </div>
           <div className="sm:ml-20 mt-2   ">
             <ul className="list-disc pl-5 mb-4 text-gray-500 ">
-              <li className="">Materiały szkoleniowe</li>
-              <li>Teoria 30h</li>
-              <li>Praktyka 30h</li>
-              <li>Egzamin wewnętrzny teoretyczny i praktyczny</li>
-              <li>
-                Szkolenie z zakresu pierwszej pomocy z możliwością praktyk
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">Materiały szkoleniowe </span>
               </li>
-              <li>Konsultacje z instruktorem - wykładowcą</li>
-              <li>Ubezpieczenie NNW</li>
-              <li className="font-bold">Jazdy dodatkowe 1h/80 zł</li>
-              <li className="font-bold">Jazdy dodatkowe pakiet 10h/700 zł</li>
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">Teoria 30h </span>
+              </li>
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">Praktyka 30h</span>{" "}
+              </li>
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">
+                  Egzamin wewnętrzny teoretyczny i praktyczny
+                </span>
+              </li>
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">
+                  Szkolenie z zakresu pierwszej pomocy z możliwością praktyk
+                </span>
+              </li>
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">
+                  Konsultacje z instruktorem - wykładowcą
+                </span>
+              </li>
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">Ubezpieczenie NNW</span>
+              </li>
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">Jazdy dodatkowe 1h/80 zł</span>
+              </li>
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">
+                  Jazdy dodatkowe pakiet 10h/700 zł{" "}
+                </span>
+              </li>
             </ul>
           </div>
           <div className="sm:ml-20 mt-10 text-xl  uppercase tracking-wide text-start  text-black font-semibold ">
@@ -69,21 +93,27 @@ const katA1Cart = ({}) => {
           </div>
           <div className="sm:ml-20 mt-2   ">
             <ul className="list-disc pl-5 mb-4  text-gray-500 ">
-              <li>
-                Raty 0% - przez czas trwania kursu I rata - 500 zł przed
-                rozpoczęciem
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">
+                  Raty 0% - przez czas trwania kursu I rata - 500 zł przed
+                  rozpoczęciem
+                </span>
               </li>
-              <li>
-                {" "}
-                zajęć teoretycznych, II rata - 500 zł przed rozpoczęciem zajęć
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">
+                  zajęć teoretycznych, II rata - 500 zł przed rozpoczęciem zajęć
+                </span>
               </li>
-              <li>
-                praktycznych III rata - 500 zł po wyjeżdżeniu 10 godzin zajęć
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">
+                  praktycznych III rata - 500 zł po wyjeżdżeniu 10 godzin zajęć
+                </span>
               </li>
-              <li>
-                {" "}
-                praktycznych IV rata - 500 zł po wyjeżdżeniu 20 godzin zajęć
-                praktycznych
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">
+                  praktycznych IV rata - 500 zł po wyjeżdżeniu 20 godzin zajęć
+                  praktycznych
+                </span>
               </li>
             </ul>
           </div>
@@ -91,37 +121,43 @@ const katA1Cart = ({}) => {
         <div className="container lg:w-1/2  w-full mx-auto p-6">
           <Card title="To oferujemy:" imgSrc="/logo2.png">
             <ul className="list-disc pl-5 mb-4">
-              <li>
-                Asfaltowy, oświetlony plac manewrowy, największy w Bydgoszczy!
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">
+                  Asfaltowy, oświetlony plac manewrowy, największy w Bydgoszczy!
+                </span>
               </li>
-              <li>
-                Skuteczne metody szkolenia opracowane przez instruktorów i
-                pedagogów potwierdzone wysoką zdawalnością egzaminów
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">
+                  Skuteczne metody szkolenia opracowane przez instruktorów i
+                  pedagogów potwierdzone wysoką zdawalnością egzaminów
+                </span>
               </li>
-              <li>
-                Możliwość wyboru dogodnych godzin jazd szkoleniowych (jazdy
-                prowadzone są także w soboty, niedziele oraz w godzinach
-                wieczornych)
-              </li>
-              <li>
-                Jazdy zaczynamy i kończymy w dogodnym miejscu - przy rondzie
-                fordońskim (węzeł komunikacyjny)
+              <li className="font-medium list-disc text-red-500  ">
+                <span className="text-gray-800">
+                  Możliwość wyboru dogodnych godzin jazd szkoleniowych (jazdy
+                  prowadzone są także w soboty, niedziele oraz w godzinach
+                  wieczornych)
+                </span>
               </li>
             </ul>
           </Card>
 
           <Card title="Badanie lekarskie:" imgSrc="/badania-lekarskie.jpg">
-            <p className="mb-4">
-              Cena kursu nie obejmuje badania lekarskiego. Istnieje możliwość
-              wykonania takiego badania w naszym OSK. W celu wyznaczenia terminu
-              badania oraz umówienia wizyty w naszym ośrodku prosimy o kontakt
-              telefoniczny z naszym biurem. Koszt badania lekarskiego dla osób,
-              które zapiszą się na
-            </p>
-            <p>
-              Opłata za badanie przyjmowana jest przez lekarza w formie gotówki
-              lub karty płatniczej.
-            </p>
+            <li className="font-medium list-disc text-red-500  ">
+              <span className="text-gray-800">
+                Cena kursu nie obejmuje badania lekarskiego. Istnieje możliwość
+                wykonania takiego badania w naszym OSK. W celu wyznaczenia
+                terminu badania oraz umówienia wizyty w naszym ośrodku prosimy o
+                kontakt telefoniczny z naszym biurem. Koszt badania lekarskiego
+                dla osób, które zapiszą się na
+              </span>
+            </li>
+            <li className="font-medium list-disc text-red-500  ">
+              <span className="text-gray-800">
+                Opłata za badanie przyjmowana jest przez lekarza w formie
+                gotówki lub karty płatniczej.
+              </span>
+            </li>
           </Card>
         </div>
       </div>

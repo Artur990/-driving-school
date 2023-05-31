@@ -2,8 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { FC, useState } from "react";
 import { a } from "react-spring";
-import KatBCart from "./B/KatBCart";
-import KatBECart from "./B/KatBECart";
+import KatBCart from "./b/KatBCart";
+import KatBECart from "./b/KatBECart";
 
 interface KatAProps {}
 
@@ -14,7 +14,7 @@ const KatB: FC<KatAProps> = ({}) => {
       <Head>
         <title>Kategoria B</title>
         <meta name="description" content="Informacje o kursie kategorii B" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.jpg" />
       </Head>
       <div className="flex items-center justify-center">
         <img className="h-20 w-28" src="/logo.jpg" alt="logo" />
@@ -22,7 +22,7 @@ const KatB: FC<KatAProps> = ({}) => {
       <h2 className="text-3xl text-center font-bold tracking-tight text-red-600 sm:text-4xl">
         Szkoła jazdy Strażak
       </h2>
-      <h3 className="text-lg text-center font-bold tracking-tight text-black sm:text-xl mt-3">
+      <h3 className=" text-center text-2xl font-bold mb-5 tracking-tight text-black sm:text-xl mt-10">
         wybierz kategorie:
       </h3>
       <div className="flex justify-center space-x-4 m-4 mt-1">

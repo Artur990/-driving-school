@@ -1,4 +1,3 @@
-import Contsct from "@/components/Contsct";
 import Food from "@/components/Food";
 import Form from "@/components/Form";
 import Nav from "@/components/Nav";
@@ -13,7 +12,6 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <div>
       <Nav />
       {children}
-      <Contsct />
       <Food />
     </div>
   );
