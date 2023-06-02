@@ -1,15 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
-import { FC, useState } from "react";
-import { FaBusAlt, FaCar, FaMotorcycle, FaTruckMoving } from "react-icons/fa";
-import KatACart from "./a/KatACart";
-import KatAmCart from "./a/KatAmCart";
-import KatA1Cart from "./a/KatA1Cart";
-import KatA2Cart from "./a/KatA2Cart";
-// import KatACart form '../components/A/KatACart'
-interface KatAProps {}
+import { useState } from "react";
+import KatACart from "./categories/a/KatACart";
+import KatAmCart from "./categories/a/KatAmCart";
+import KatA1Cart from "./categories/a/KatA1Cart";
+import KatA2Cart from "./categories/a/KatA2Cart";
 
-const KatA: FC<KatAProps> = ({}) => {
+const KatA = () => {
   const [activeTab, setActiveTab] = useState("A");
   return (
     <div>
@@ -20,7 +17,13 @@ const KatA: FC<KatAProps> = ({}) => {
       </Head>
       <div className="mx-auto max-w-4xl lg:text-center p-5">
         <div className="flex items-center justify-center">
-          <img className="h-20 w-28" src="/logo.jpg" alt="logo" />
+          <Image
+            width={120}
+            height={100}
+            className="h-20 w-28"
+            src="/logo.jpg"
+            alt="logo"
+          />
         </div>
         <h2 className="text-3xl text-center font-bold tracking-tight text-red-600 sm:text-4xl">
           Szkoła jazdy Strażak
@@ -63,8 +66,6 @@ const KatA: FC<KatAProps> = ({}) => {
                 powinna przedstawić zgodę rodziców.
               </span>
             </li>
-            {/* <hr className="border-red-600 antialiased" /> */}
-
             <li className="font-medium list-disc text-red-500  ">
               <span className="text-gray-800">
                 <strong>Kategoria A1</strong> - minimalny wiek: 16 lat. Pozwala
@@ -73,25 +74,18 @@ const KatA: FC<KatAProps> = ({}) => {
                 przedstawić zgodę rodziców.
               </span>
             </li>
-            {/* <hr className="border-red-600 antialiased" /> */}
-
             <li className="font-medium list-disc text-red-500  ">
               <span className="text-gray-800">
                 <strong>Kategoria A2</strong> - minimalny wiek: 18 lat. Pozwala
                 na kierowanie motocyklem o mocy do 35 kW.
               </span>
-              {/* Możliwość zdobycia, jeżeli posiadane jest prawo jazdy kategorii A1. */}
             </li>
-            {/* <hr className="border-red-600 antialiased" /> */}
-
             <li className="font-medium list-disc text-red-500  ">
               <span className="text-gray-800">
                 <strong>Kategoria A</strong> - minimalny wiek: 24 lata. Pozwala
                 na kierowanie motocyklem bez ograniczeń mocy.
               </span>
             </li>
-            {/* <hr className="border-red-600 antialiased" /> */}
-
             <li className="font-medium list-disc text-red-500  ">
               <span className="text-gray-800">
                 <strong>Kategoria A</strong> - minimalny wiek: 20 lat, ale tylko
@@ -100,7 +94,6 @@ const KatA: FC<KatAProps> = ({}) => {
                 ograniczeń mocy.
               </span>
             </li>
-            {/* <hr className="border-red-600 antialiased" /> */}
           </ul>
         </div>
         <h3 className=" text-center text-2xl font-bold mb-5 tracking-tight text-black sm:text-xl mt-10">
@@ -153,7 +146,6 @@ const KatA: FC<KatAProps> = ({}) => {
       {activeTab === "AM" && <KatAmCart />}
       {activeTab === "A1" && <KatA1Cart />}
       {activeTab === "A2" && <KatA2Cart />}
-      {/* <KatACart /> */}
     </div>
   );
 };

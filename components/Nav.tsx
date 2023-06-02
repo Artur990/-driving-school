@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaCar, FaMotorcycle, FaTruckMoving, FaBusAlt } from "react-icons/fa";
 
 import Head from "next/head";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { GrGallery } from "react-icons/gr";
 
 import { useRouter } from "next/router";
@@ -10,9 +10,19 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Nav() {
+  const router = useRouter();
+
   const [isOpen, setIsOpen] = useState(false);
   const [openMobile, SetIsOpenMobile] = useState(false);
+  const [activePage, setActivePage] = useState("");
 
+  // const [activePage, setActivePage] = useState(""); // Dodajemy stan
+
+  // Funkcja do obsługi kliknięcia zakładki GALERIA
+  const handleGalleryClick = () => {
+    // setActivePage("GALERIA");
+    // Dodatkowe kod dla nawigacji do strony GALERIA
+  };
   const handleNavigation = (target: string, href: string) => {
     if (window.location.pathname === "/") {
       const element = document.getElementById(target);
@@ -31,6 +41,36 @@ export default function Nav() {
   const toggleMenuMobile = () => {
     SetIsOpenMobile(!openMobile);
   };
+
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      const lastSegment = url.split("/").pop();
+      console.log(lastSegment);
+      const section = router.query.section;
+      console.log(section);
+      if (lastSegment === "Galeria") {
+        setActivePage("Galeria");
+      } else if (lastSegment === "Onas") {
+        setActivePage("Onas");
+      } else if (lastSegment === "Kontakt") {
+        setActivePage("Kontakt");
+      } else if (lastSegment === "katB" || lastSegment === "katA") {
+        setActivePage("Nasze kursy");
+      } else if (lastSegment === "co-nas-wyroznia") {
+        setActivePage("section=co-nas-wyroznia");
+      } else {
+        setActivePage("");
+      }
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    // Czyszczenie nasłuchiwacza zdarzeń przy odmontowywaniu komponentu
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, []);
+  console.log(activePage);
   return (
     <header
       // onClick={() => SetIsOpenMobile(false)}
@@ -52,10 +92,15 @@ export default function Nav() {
             />
           </Link>
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden ">
           <button
             type="button"
-            className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
+            className={`flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 
+              ${
+                activePage.toLowerCase() === "nasze kursy"
+                  ? " border-b-4 border-red-600"
+                  : " link-with-border "
+              }`}
             aria-expanded="false"
             onClick={toggleMenuMobile}
           >
@@ -82,13 +127,18 @@ export default function Nav() {
           <div className="relative">
             <button
               type="button"
-              className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
+              className={` flex items-center font-regular  gap-x-1 text-sm font-semibold leading-6 text-gray-900
+              ${
+                activePage.toLowerCase() === "nasze kursy"
+                  ? " border-b-4 border-red-600"
+                  : " link-with-border "
+              }`}
               aria-expanded="false"
               onClick={toggleMenu}
             >
               Nasze kursy
               <svg
-                className="h-5 w-5 flex-none text-gray-400"
+                className="h-5 w-5 flex-none text-gray-400 link-with-border "
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 aria-hidden="true"
@@ -188,6 +238,30 @@ export default function Nav() {
                       <p className="mt-1 text-gray-600">Autobus</p>
                     </div>
                   </Link>
+                  <Link
+                    href="/katD"
+                    onClick={() => setIsOpen(false)}
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                  >
+                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <Image
+                        width={50}
+                        height={50}
+                        src="/95.png"
+                        alt="95"
+                        className="h-8 w-8 text-gray-600 group-hover:text-indigo-600"
+                      />
+                    </div>
+                    <div className="flex-auto">
+                      <Link
+                        href="/kod95"
+                        className="block font-semibold text-gray-900"
+                      >
+                        kod95<span className="absolute inset-0"></span>
+                      </Link>
+                      <p className="mt-1 text-gray-600">Kwalifikacje </p>
+                    </div>
+                  </Link>
                 </div>
                 <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                   <Link
@@ -212,25 +286,44 @@ export default function Nav() {
           <Link
             href={"/Onas"}
             // onClick={() => handleNavigation("Onas", "/")}
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className={`text-sm font-semibold  leading-6 ext-gray-900 ${
+              activePage.toLowerCase() === "onas"
+                ? " border-b-4 border-red-600"
+                : " link-with-border "
+            }`}
           >
             O NAS
           </Link>
           <Link
             href="/Kontakt"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className={`text-sm font-semibold  leading-6 ext-gray-900 ${
+              activePage.toLowerCase() === "kontakt"
+                ? " border-b-4 border-indigo-500"
+                : " link-with-border "
+            }`}
           >
             KONTAKT
           </Link>
+
           <Link
             href="Galeria"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className={`text-sm font-semibold  leading-6 ext-gray-900 ${
+              activePage.toLowerCase() === "galeria"
+                ? "text-red-600 border-b-4 border-red-600"
+                : " link-with-border "
+            }`}
+            // onClick={handleGalleryClick}
           >
             GALERIA
           </Link>
+
           <div
             onClick={() => handleNavigation("co-nas-wyroznia", "/")}
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className={`text-sm font-semibold  leading-6 ext-gray-900 ${
+              activePage.toLowerCase() === "section=co-nas-wyroznia"
+                ? "text-red-600 border-b-4 border-red-600"
+                : " link-with-border "
+            }`}
           >
             CO NAS WYRÓŻNIA?
           </div>
@@ -238,7 +331,7 @@ export default function Nav() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             href="/Zapiszsie"
-            className="text-xs font-semibold leading-6 text-white bg-red-600 border-2 border-red-600 px-8 py-1 rounded"
+            className="text-lg font-semibold leading-6 text-white bg-red-600 border-2 border-red-600 px-1 xl:px-8 py-1 rounded"
             // style={{ height: "40px", width: "160px" }}
           >
             ZAPISZ SIĘ ONLINE
@@ -347,7 +440,7 @@ export default function Nav() {
                     </div>
                     <Link
                       href="/Onas"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      className="-mx-3 block  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       O NAS
                     </Link>
@@ -367,7 +460,7 @@ export default function Nav() {
 
                   <div className="py-6">
                     <Link
-                      href="Zapiszsie"
+                      href="zapiszsie"
                       className="bg-red-700 text-white text-center -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7  hover:bg-gray-50"
                     >
                       ZAPISZ SIĘ ONILNE

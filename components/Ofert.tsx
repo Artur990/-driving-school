@@ -2,10 +2,10 @@ import Link from "next/link";
 import { FC } from "react";
 import { useState } from "react";
 import { FaCar, FaMotorcycle, FaTruckMoving, FaBusAlt } from "react-icons/fa";
-import Car from "./ofert/Car";
-import MotorCycle from "./ofert/MotorCycle";
-import Track from "./ofert/Track";
-import Bus from "./ofert/Bus";
+import Car from "./oferts/Car";
+import MotorCycle from "./oferts/MotorCycle";
+import Track from "./oferts/Track";
+import Bus from "./oferts/Bus";
 import Image from "next/image";
 
 interface OfertProps {}
@@ -28,7 +28,7 @@ const Ofert = () => {
           <h2 className="text-3xl text-center font-bold tracking-tight text-red-600 sm:text-4xl">
             Szkoła jazdy Strażak
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg text-bold leading-8 text-gray-600">
             Dołącz do grona zadowolonych kierowców i zacznij swoją przygodę z
             prowadzeniem pojazdów w najlepszej szkole jazdy w Bydgoszczy.
             Oferujemy kompleksowe kursy na samochód, motor, ciężarówkę i

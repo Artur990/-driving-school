@@ -1,9 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import { FC, useState } from "react";
-import { a } from "react-spring";
-import KatBCart from "./b/KatBCart";
-import KatBECart from "./b/KatBECart";
+import KatBCart from "./categories/b/KatBCart";
+import KatBECart from "./categories/b/KatBECart";
 
 interface KatAProps {}
 
@@ -17,7 +16,13 @@ const KatB: FC<KatAProps> = ({}) => {
         <link rel="icon" href="/logo.jpg" />
       </Head>
       <div className="flex items-center justify-center">
-        <img className="h-20 w-28" src="/logo.jpg" alt="logo" />
+        <Image
+          width={100}
+          height={100}
+          className="h-20 w-28"
+          src="/logo.jpg"
+          alt="logo"
+        />
       </div>
       <h2 className="text-3xl text-center font-bold tracking-tight text-red-600 sm:text-4xl">
         Szkoła jazdy Strażak
@@ -54,19 +59,3 @@ const KatB: FC<KatAProps> = ({}) => {
 };
 
 export default KatB;
-
-{
-  /* <Card title="W cenie kursu wliczone są:" imgSrc="/car-szkola1.png">
-            <ul className="list-disc pl-5 mb-4">
-              <li>Materiały szkoleniowe</li>
-              <li>Teoria 30h</li>
-              <li>Praktyka 30h</li>
-              <li>Egzamin wewnętrzny teoretyczny i praktyczny</li>
-              <li>
-                Szkolenie z zakresu pierwszej pomocy z możliwością praktyk
-              </li>
-              <li>Konsultacje z instruktorem - wykładowcą</li>
-              <li>Ubezpieczenie NNW</li>
-            </ul>
-          </Card> */
-}

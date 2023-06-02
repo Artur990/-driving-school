@@ -2,6 +2,7 @@ import Head from "next/head";
 import { FC } from "react";
 import Image from "next/image";
 import RegistrationForm from "@/components/RegistrationForm";
+import Opinions from "@/components/Opinions";
 
 interface InstructorProps {
   name: string;
@@ -79,7 +80,7 @@ const Onas: FC = () => {
             ))}
           </div>
           <div className="bg-zinc-800 w-full h-36 flex items-center justify-center">
-            <p className="text-3xl font-extrabold text-white mb-8 text-center">
+            <p className="text-regular text-3xl font-extrabold text-white mb-8 text-center">
               Zobacz co mówią o nas kursanci:
             </p>
           </div>
@@ -107,7 +108,7 @@ const Onas: FC = () => {
           </div>
         </div>
       </section>
-
+      {/* <Opinions /> */}
       <RegistrationForm />
     </>
   );

@@ -32,16 +32,13 @@ const Gallery = () => {
             className="relative group overflow-hidden rounded-md shadow-lg cursor-pointer transform transition-transform duration-300 hover:scale-105"
             onClick={() => openModal(img.src)}
           >
-            <img
+            <Image
+              width={300}
+              height={200}
               src={img.src}
               alt={`Image ${index + 1}`}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-200 flex items-center justify-center">
-              {/* <p className="text-white opacity-0 group-hover:opacity-100">
-                {img.description}
-              </p> */}
-            </div>
           </div>
         ))}
       </div>
@@ -57,8 +54,8 @@ const Gallery = () => {
           &times;
         </button>
         <Image
-          width={600}
-          height={600}
+          width={400}
+          height={300}
           src={selectedImg}
           alt="photo"
           className="max-h-full max-w-full"
