@@ -1,7 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaCar, FaMotorcycle, FaTruckMoving, FaBusAlt } from "react-icons/fa";
 
-import Head from "next/head";
 import { FC, useEffect, useState } from "react";
 import { GrGallery } from "react-icons/gr";
 
@@ -12,17 +10,10 @@ import Image from "next/image";
 export default function Nav() {
   const router = useRouter();
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [openMobile, SetIsOpenMobile] = useState(false);
-  const [activePage, setActivePage] = useState("");
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [openMobile, SetIsOpenMobile] = useState<boolean>(false);
+  const [activePage, setActivePage] = useState<string>("");
 
-  // const [activePage, setActivePage] = useState(""); // Dodajemy stan
-
-  // Funkcja do obsługi kliknięcia zakładki GALERIA
-  const handleGalleryClick = () => {
-    // setActivePage("GALERIA");
-    // Dodatkowe kod dla nawigacji do strony GALERIA
-  };
   const handleNavigation = (target: string, href: string) => {
     if (window.location.pathname === "/") {
       const element = document.getElementById(target);
@@ -45,9 +36,7 @@ export default function Nav() {
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       const lastSegment = url.split("/").pop();
-      console.log(lastSegment);
-      const section = router.query.section;
-      console.log(section);
+
       if (lastSegment === "Galeria") {
         setActivePage("Galeria");
       } else if (lastSegment === "Onas") {
@@ -65,17 +54,12 @@ export default function Nav() {
 
     router.events.on("routeChangeComplete", handleRouteChange);
 
-    // Czyszczenie nasłuchiwacza zdarzeń przy odmontowywaniu komponentu
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, []);
-  console.log(activePage);
   return (
-    <header
-      // onClick={() => SetIsOpenMobile(false)}
-      className=" relative z-40 bg-white"
-    >
+    <header className=" relative z-40 bg-white">
       <nav
         className="mx-auto w-full h-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -116,9 +100,9 @@ export default function Nav() {
               }}
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               />
             </svg>
           </button>
@@ -160,14 +144,10 @@ export default function Nav() {
                   <Link
                     href="/katB"
                     onClick={() => setIsOpen(false)}
-                    // onClick={() => route("katB")}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                   >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <FaCar
-                        // icon={faCar}
-                        className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
-                      />
+                      <FaCar className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
                     </div>
                     <div className="flex-auto">
                       <Link
@@ -182,7 +162,7 @@ export default function Nav() {
                   <Link
                     href="/katA"
                     onClick={() => setIsOpen(false)}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                   >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <FaMotorcycle className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
@@ -204,7 +184,7 @@ export default function Nav() {
                   <Link
                     href="/katC-E"
                     onClick={() => setIsOpen(false)}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                   >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <FaTruckMoving className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
@@ -223,7 +203,7 @@ export default function Nav() {
                   <Link
                     href="/katD"
                     onClick={() => setIsOpen(false)}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                   >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <FaBusAlt className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
@@ -241,7 +221,7 @@ export default function Nav() {
                   <Link
                     href="/katD"
                     onClick={() => setIsOpen(false)}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                   >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <Image
@@ -254,7 +234,7 @@ export default function Nav() {
                     </div>
                     <div className="flex-auto">
                       <Link
-                        href="/kod95"
+                        href="/Kod95"
                         className="block font-semibold text-gray-900"
                       >
                         kod95<span className="absolute inset-0"></span>
@@ -267,14 +247,14 @@ export default function Nav() {
                   <Link
                     href="/Galeria"
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-200"
                   >
                     <GrGallery />
                     Galeria
                   </Link>
                   <div
                     onClick={() => handleNavigation("five-steps", "/")}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-200"
                   >
                     Prawo jazdy w 5 ktrokach
                   </div>
@@ -285,7 +265,6 @@ export default function Nav() {
 
           <Link
             href={"/Onas"}
-            // onClick={() => handleNavigation("Onas", "/")}
             className={`text-sm font-semibold  leading-6 ext-gray-900 ${
               activePage.toLowerCase() === "onas"
                 ? " border-b-4 border-red-600"
@@ -298,7 +277,7 @@ export default function Nav() {
             href="/Kontakt"
             className={`text-sm font-semibold  leading-6 ext-gray-900 ${
               activePage.toLowerCase() === "kontakt"
-                ? " border-b-4 border-indigo-500"
+                ? " border-b-4 border-red-600"
                 : " link-with-border "
             }`}
           >
@@ -312,7 +291,6 @@ export default function Nav() {
                 ? "text-red-600 border-b-4 border-red-600"
                 : " link-with-border "
             }`}
-            // onClick={handleGalleryClick}
           >
             GALERIA
           </Link>
@@ -331,8 +309,7 @@ export default function Nav() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             href="/Zapiszsie"
-            className="text-lg font-semibold leading-6 text-white bg-red-600 border-2 border-red-600 px-1 xl:px-8 py-1 rounded"
-            // style={{ height: "40px", width: "160px" }}
+            className="text-lg font-semibold leading-6  text-white bg-red-600 lg:text-base lg:px-3 lg:py-2  px-1 xl:px-8 xl:text-lg py-2 rounded hover:bg-indigo-500"
           >
             ZAPISZ SIĘ ONLINE
           </Link>
@@ -413,46 +390,66 @@ export default function Nav() {
                         <div className="mt-2 space-y-2" id="disclosure-1">
                           <Link
                             href="/katB"
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                            onClick={toggleMenuMobile}
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-200"
                           >
                             Kat. B
                           </Link>
                           <Link
                             href="/katA"
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                            onClick={toggleMenuMobile}
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-200"
                           >
                             Kat. AM, A1, A2, A
                           </Link>
                           <Link
                             href="katC"
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                            onClick={toggleMenuMobile}
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-200"
                           >
                             Kat. C, E
                           </Link>
                           <Link
                             href="/katD"
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                            onClick={toggleMenuMobile}
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-200"
                           >
                             Kat, D
+                          </Link>
+                          <Link
+                            href="/Kod95"
+                            onClick={toggleMenuMobile}
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-200"
+                          >
+                            KWALIFIKACJE Kod95
                           </Link>
                         </div>
                       )}
                     </div>
                     <Link
                       href="/Onas"
-                      className="-mx-3 block  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      onClick={toggleMenuMobile}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200"
                     >
                       O NAS
                     </Link>
                     <Link
                       href="/Kontakt"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      onClick={toggleMenuMobile}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200"
                     >
                       KONTAKT
                     </Link>
+                    <Link
+                      href="/Galeria"
+                      onClick={toggleMenuMobile}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200"
+                    >
+                      GALERIA
+                    </Link>
                     <div
                       onClick={() => handleNavigation("co-nas-wyroznia", "/")}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200"
                     >
                       CO NAS WYRÓŻNIA?
                     </div>
@@ -460,8 +457,9 @@ export default function Nav() {
 
                   <div className="py-6">
                     <Link
-                      href="zapiszsie"
-                      className="bg-red-700 text-white text-center -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7  hover:bg-gray-50"
+                      href="Zapiszsie"
+                      onClick={toggleMenuMobile}
+                      className="bg-red-700 text-white text-center -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7  hover:bg-indigo-500"
                     >
                       ZAPISZ SIĘ ONILNE
                     </Link>

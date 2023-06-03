@@ -7,7 +7,7 @@ import KatBECart from "./categories/b/KatBECart";
 interface KatAProps {}
 
 const KatB: FC<KatAProps> = ({}) => {
-  const [activeTab, setActiveTab] = useState("B");
+  const [activeTab, setActiveTab] = useState<string>("B");
   return (
     <div>
       <Head>

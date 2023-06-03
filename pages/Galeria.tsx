@@ -1,9 +1,8 @@
 import { FC } from "react";
 import SliderGallery from "../components/SliderGallery";
 import Head from "next/head";
-import RegistrationForm from "@/components/RegistrationForm";
+import Registration from "@/components/Registration";
 import Image from "next/image";
-interface OnasProps {}
 
 const images = [
   "/o-nas/o-nas1.jpg",
@@ -16,7 +15,7 @@ const images = [
   "/o-nas/o-nas8.jpg",
 ];
 
-const Onas: FC<OnasProps> = ({}) => {
+const index: FC = ({}) => {
   return (
     <>
       <Head>
@@ -48,9 +47,9 @@ const Onas: FC<OnasProps> = ({}) => {
         </p>
       </div>
       <SliderGallery images={images} />
-      <RegistrationForm />
+      <Registration />
     </>
   );
 };
 
-export default Onas;
+export default index;

@@ -1,3 +1,4 @@
+"strict mode";
 import React, { useState } from "react";
 import "tailwindcss/tailwind.css";
 import Modal from "react-modal";

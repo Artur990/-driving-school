@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Form from "./Form";
+import Form from "./ui/ContactForm";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
 import { BsArrowRightShort } from "react-icons/bs";

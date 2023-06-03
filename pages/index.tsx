@@ -1,21 +1,12 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-// import Nav from "@/components/Nav";
-import Nav from "@/components/Nav";
-import Ofert from "@/components/Ofert";
 import Header from "@/components/Header";
-import Contsct from "@/components/Contact";
 import Gallery from "@/components/Gallery";
-import Food from "@/components/Food";
-import KatA from "@/components/KatB";
 import FiveSteps from "@/components/FiveSteps";
 import Distinguishes from "@/components/Distinguishes";
 import Features from "@/components/Features";
-import Carousell from "@/components/Slaider";
+import Carousel from "@/components/Carousel";
 import Head from "next/head";
-import RegistrationForm from "@/components/RegistrationForm";
-// import Carousel from "@/components/Slaider";
-const inter = Inter({ subsets: ["latin"] });
+import Oferts from "@/components/Oferts";
+import Registration from "@/components/Registration";
 
 export default function Home() {
   return (
@@ -27,13 +18,13 @@ export default function Home() {
       </Head>
       <div>
         <Header />
-        <Ofert />
+        <Oferts />
         <Gallery />
         <Distinguishes />
         <FiveSteps />
-        <Carousell />
+        <Carousel />
         <Features />
-        <RegistrationForm />
+        <Registration />
       </div>
     </>
   );

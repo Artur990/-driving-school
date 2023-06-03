@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { FC } from "react";
 import { useState } from "react";
 import { FaCar, FaMotorcycle, FaTruckMoving, FaBusAlt } from "react-icons/fa";
 import Car from "./oferts/Car";
@@ -8,9 +6,7 @@ import Track from "./oferts/Track";
 import Bus from "./oferts/Bus";
 import Image from "next/image";
 
-interface OfertProps {}
-
-const Ofert = () => {
+const Oferts = () => {
   const [activeTab, setActiveTab] = useState("car");
   return (
     <div className=" py-12 sm:py-10 bg-white">
@@ -86,4 +82,4 @@ const Ofert = () => {
   );
 };
 
-export default Ofert;
+export default Oferts;

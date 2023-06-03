@@ -30,7 +30,6 @@ export default function Features() {
 
   return (
     <section className=" w-auto mx-2 px-4 text-white bg-zinc-800 lg:mx-10 py-32">
-      {/* <h2 className="text-2xl font-bold mb-6">Co nas wyróżnia?</h2> */}
       <div className="grid  -cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {features.map((feature, index) => (
           <div key={index} className=" rounded bg-transparent shadow p-6">

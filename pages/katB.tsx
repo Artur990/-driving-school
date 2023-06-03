@@ -1,10 +1,9 @@
 import KatA from "@/components/KatB";
+import Registration from "@/components/Registration";
 import Head from "next/head";
 import { FC } from "react";
-import RegistrationForm from "@/components/RegistrationForm";
-interface indexProps {}
 
-const index: FC<indexProps> = ({}) => {
+const index: FC = ({}) => {
   return (
     <>
       <Head>
@@ -13,7 +12,7 @@ const index: FC<indexProps> = ({}) => {
         <link rel="icon" href="/logo.jpg" />
       </Head>
       <KatA />
-      <RegistrationForm />
+      <Registration />
     </>
   );
 };

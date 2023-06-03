@@ -5,7 +5,7 @@ import { FC } from "react";
 
 interface KontaktProps {}
 
-const Kontakt: FC<KontaktProps> = ({}) => {
+const index: FC<KontaktProps> = ({}) => {
   return (
     <>
       <Head>
@@ -26,7 +26,7 @@ const Kontakt: FC<KontaktProps> = ({}) => {
         <h2 className="text-3xl text-center font-bold tracking-tight text-red-600 sm:text-4xl">
           Szkoła jazdy Strażak
         </h2>
-        <p className="mt-6 text-lg leading-8 text-gray-600">
+        <p className="mt-6 px-5 text-lg leading-8 text-gray-600">
           Dołącz do grona zadowolonych kierowców i zacznij swoją przygodę z
           prowadzeniem pojazdów w najlepszej szkole jazdy w Bydgoszczy.
           Oferujemy kompleksowe kursy na samochód, motor, ciężarówkę i autobus,
@@ -41,4 +41,4 @@ const Kontakt: FC<KontaktProps> = ({}) => {
   );
 };
 
-export default Kontakt;
+export default index;

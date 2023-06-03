@@ -1,62 +1,37 @@
-import Head from "next/head";
-import { FC } from "react";
-import Image from "next/image";
-import RegistrationForm from "@/components/RegistrationForm";
-import Opinions from "@/components/Opinions";
+import Head from 'next/head';
+import Image from 'next/image';
+import Registration from '@/components/Registration';
+import InstructorCard from '@/components/ui/InstructorCard';
 
-interface InstructorProps {
-  name: string;
-  image: string;
-}
-
-const Instructor: FC<InstructorProps> = ({ name, image }) => {
-  return (
-    <div className="flex lg:flex-col w-full lg:w-1/3 h-3/4  m-6 ">
-      <div className="w-full h-1/4 sm:w-full sm:h-1/4 mr-4">
-        <Image
-          src={image}
-          alt={name}
-          width={500}
-          height={300}
-          className="rounded-lg w-full h-full"
-        />
-      </div>
-      <div className="w-full h-24 sm:w-1/2 sm:h-32 mr-4">
-        <h3 className="text-2xl m-2 font-semibold">{name}</h3>
-      </div>
-    </div>
-  );
-};
-
-const Onas: FC = () => {
+const index = () => {
   const instructors = [
-    { name: "Marcin", image: "/onas/marcin.jpg" },
-    { name: "Bartek", image: "/onas/bartek.jpg" },
-    { name: "Szczepan", image: "/onas/szczepan.jpg" },
+    { name: 'Marcin', image: '/onas/marcin.jpg' },
+    { name: 'Bartek', image: '/onas/bartek.jpg' },
+    { name: 'Szczepan', image: '/onas/szczepan.jpg' },
   ];
   const photos = [
-    "/onas/opinions/opinion1.png",
-    "/onas/opinions/opinion2.png",
-    "/onas/opinions/opinion3.png",
-    "/onas/opinions/opinion4.png",
-    "/onas/opinions/opinion5.png",
-    "/onas/opinions/opinion6.png",
+    '/onas/opinions/opinion1.png',
+    '/onas/opinions/opinion4.png',
+    '/onas/opinions/opinion3.png',
+    '/onas/opinions/opinion2.png',
+    '/onas/opinions/opinion5.png',
+    '/onas/opinions/opinion6.png',
   ];
 
   return (
     <>
       <Head>
-        <title>Szkoła jazdy Strażak - o nas szkoła w Bydgoszczy</title>
+        <title>Szkoła jazdy Strażak - o nas szkoła jazdy w Bydgoszczy</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.jpg" />
       </Head>
 
-      <section className="bg-gray-100 py-10">
-        <div className=" mx-auto px-1">
-          <h1 className="text-2xl font-bold mb-8 text-center">
+      <section className=" py-10">
+        <div className="mx-auto bg-[#F7FBFC] px-1">
+          <h1 className="mb-8 text-center text-2xl font-bold ">
             Szkoła Jazdy Strażak w Bydgoszczy
           </h1>
-          <p className="text-lg mb-8 text-gray-800 px-10">
+          <p className="text-gray-800, mb-8 px-10 text-lg ">
             Szkoła Jazdy Strażak została stworzona z ideą pomagania ludziom, aby
             mogli łatwo zdobyć wymarzone prawo jazdy i cieszyć się
             niezależnością oraz przyjemnością samodzielnej jazdy. Uczymy przede
@@ -65,42 +40,47 @@ const Onas: FC = () => {
             naturalnym spokojem i bez stresu, zdając go za pierwszym razem!
           </p>
 
-          <div className="flex justify-center items-center mb-8">
+          <div className="mb-8 flex items-center justify-center">
             <Image src="/onas/team.jpg" alt="" width={900} height={900} />
           </div>
-
-          <h2 className="text-2xl font-bold mb-4 text-center">Instruktorzy:</h2>
-          <div className="lg:flex xl:p-10 bg-[#fffff]">
-            {instructors.map((instructor, index) => (
-              <Instructor
-                key={index}
-                name={instructor.name}
-                image={instructor.image}
-              />
-            ))}
+          <div className="mt-10 bg-[#F7FBFC]">
+            <h2 className="mb-4 py-10 text-center text-2xl font-bold ">
+              Instruktorzy:
+            </h2>
+            <div className=" lg:flex xl:p-10">
+              {instructors.map((instructor, index) => (
+                <InstructorCard
+                  key={index}
+                  name={instructor.name}
+                  image={instructor.image}
+                />
+              ))}
+            </div>
           </div>
-          <div className="bg-zinc-800 w-full h-36 flex items-center justify-center">
-            <p className="text-regular text-3xl font-extrabold text-white mb-8 text-center">
+          <div className="flex h-36 w-full items-center justify-center bg-zinc-800">
+            <p className="text-regular mb-8 text-center text-3xl font-extrabold text-white">
               Zobacz co mówią o nas kursanci:
             </p>
           </div>
-          <div className="flex flex-wrap justify-center">
+          <div className="flex flex-wrap justify-center bg-[#323232]">
             {photos.map((photo, index) => (
-              <div key={index} className="w-3/4 lg:w-2/5 min-h-40 h-auto m-5">
-                <img
+              <div key={index} className="min-h-40 m-5 h-auto w-3/4 lg:w-2/5">
+                <Image
+                  width={500}
+                  height={150}
                   src={photo}
                   alt={`Photo ${index + 1}`}
-                  className="w-full h-auto"
+                  className="h-auto w-full"
                 />
               </div>
             ))}
           </div>
-          <div className="flex justify-center ">
+          <div className="flex justify-center bg-[#323232] py-10 ">
             <a
-              href="https://www.superprawojazdy.pl/opinie-o-szkole/szkola-jazdy-strazak-bydgoszcz/"
+              href="https://www.superprawojazdy.pl/szkola-jazdy-strazak,21769.htm"
               target="_blank"
               rel="noopener noreferrer"
-              className="block  bg-red-700 max-w-[500px] w-auto text-white text-center rounded-lg py-3 px-6 font-semibold text-lg hover:bg-gray-800"
+              className="block  w-auto max-w-[500px] rounded-lg bg-red-700 px-6 py-3 text-center text-lg font-semibold text-white hover:bg-indigo-500"
             >
               Zobacz więcej zaufanych opinii na stronie superprawojazdy.pl
               &gt;&gt;
@@ -108,10 +88,9 @@ const Onas: FC = () => {
           </div>
         </div>
       </section>
-      {/* <Opinions /> */}
-      <RegistrationForm />
+      <Registration />
     </>
   );
 };
 
-export default Onas;
+export default index;

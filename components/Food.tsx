@@ -1,12 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
-import { BsBuildings } from "react-icons/bs";
-import { TbBuildingSkyscraper } from "react-icons/tb";
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import { BsBuildings } from 'react-icons/bs';
+import { TbBuildingSkyscraper } from 'react-icons/tb';
+import Image from 'next/image';
 
 const containerStyle = {
-  width: "100%",
-  height: "100%",
+  width: '100%',
+  height: '100%',
 };
 
 const center = {
@@ -25,26 +26,28 @@ const GoogleMapComponent = () => {
 const Food = () => {
   return (
     <>
-      <div className="w-[95%]  mx-auto h-auto lg:h-[700px] bg-zinc-800 block lg:flex justify-between text-white  ">
-        <div className="flex flex-col items-center w-full lg:w-1/2">
-          <div className="flex h-auto w-full p-2 pb-0 xl:p-24 xl:pb-2  justify-center lg-1/2    ">
-            <img
+      <div className=" mx-auto block  w-full  justify-between bg-zinc-800 text-white lg:flex lg:min-h-[70%] lg:w-[95%]  ">
+        <div className="flex w-full flex-col items-center  lg:w-1/2">
+          <div className="flex w-full flex-col items-center   justify-center p-2 pb-0 lg:flex-row lg:items-start  xl:p-24 xl:pb-2    ">
+            <Image
+              width={200}
+              height={200}
               src="/logo2.png"
               alt="logo"
-              className="h-32 w-1/4 text-white"
+              className="h-32 w-1/3 text-white"
             />
             <div className="w-2/3">
-              <h2 className="text-2xl my-5 font-extrabold">
+              <h2 className="my-5 text-2xl font-extrabold">
                 P.H.U. Strażak Bartosz Graboń
               </h2>
-              <h3 className="text-xl mb-10 font-bold">Szkoła Jazdy Strażak </h3>
+              <h3 className="mb-10 text-xl font-bold">Szkoła Jazdy Strażak </h3>
               <p className="my-3 text-gray-400">
                 Szkoła Jazdy Strażak założona przez bydgoskiego strażaka,
                 została stworzona z ideą pomagania ludziom, aby mogli łatwo i
-                bez stresu zdobyć wymarzone prawo jazdy.{" "}
+                bez stresu zdobyć wymarzone prawo jazdy.{' '}
               </p>
               <p className="my-3 text-gray-400">
-                <span className="font-bold text-white">E-mail:</span>{" "}
+                <span className="font-bold text-white">E-mail:</span>{' '}
                 sjstrazak@gmail.com
                 <br />
                 <span className="font-bold text-white">Santander: </span>37 1090
@@ -58,18 +61,18 @@ const Food = () => {
               </p>
             </div>
           </div>
-          <div className="w-3/5 h-[1px] bg-white"></div>
-          <h2 className="text-2xl my-0 text-gray-500 font-extrabold">
-            Kontakt Telefoniczny{" "}
+          <div className="h-[1px] w-3/5 bg-white"></div>
+          <h2 className="my-0 text-2xl font-extrabold text-red-500">
+            Kontakt Telefoniczny{' '}
           </h2>
-          <h2 className="text-2xl my-0 font-extrabold">+48 508 808 310 </h2>
+          <h2 className="my-0 text-2xl font-extrabold">+48 508 808 310 </h2>
         </div>
-        <div className=" w-1/2 lg:w-1/2 ">
+        <div className=" w-3/2 lg:w-1/2 ">
           <GoogleMapComponent />
         </div>
       </div>
-      <div className="w-[95%] mx-auto h-[200px] bg-stone-900 flex justify-center items-center mb-20 ">
-        <h2 className="text-white">
+      <div className="mx-auto mb-20 flex h-[200px] w-full items-center justify-center bg-stone-900 lg:w-[95%] ">
+        <h2 className="text-center text-white">
           © 2022 Wszelkie prawa zastrzeżone. Szkoła jazdy Strażak Bydgoszcz
           Polityka Prywatności
         </h2>
