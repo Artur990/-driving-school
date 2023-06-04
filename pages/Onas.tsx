@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Registration from '@/components/Registration';
 import InstructorCard from '@/components/ui/InstructorCard';
 
-const index = () => {
+export default function Index() {
   const instructors = [
     { name: 'Marcin', image: '/onas/marcin.jpg' },
     { name: 'Bartek', image: '/onas/bartek.jpg' },
@@ -91,6 +91,4 @@ const index = () => {
       <Registration />
     </>
   );
-};
-
-export default index;
+}

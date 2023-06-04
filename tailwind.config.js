@@ -1,5 +1,4 @@
-const { fontFamily } = require('tailwindcss/defaultTheme');
-const plugin = require('tailwindcss/plugin');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: [
@@ -10,16 +9,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', ...fontFamily.sans],
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
       },
     },
+    fontFamily: {
+      sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+    },
   },
-  plugins: [
-    plugin(function ({ addBase }) {
-      addBase({
-        '@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap");':
-          {},
-      });
-    }),
-  ],
 };

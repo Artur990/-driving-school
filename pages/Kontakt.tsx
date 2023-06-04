@@ -1,11 +1,9 @@
-import Contact from "@/components/Contact";
-import Head from "next/head";
-import Image from "next/image";
-import { FC } from "react";
+import Contact from '@/components/Contact';
+import Head from 'next/head';
+import Image from 'next/image';
+import { FC } from 'react';
 
-interface KontaktProps {}
-
-const index: FC<KontaktProps> = ({}) => {
+export default function Index() {
   return (
     <>
       <Head>
@@ -23,7 +21,7 @@ const index: FC<KontaktProps> = ({}) => {
             alt="logo"
           />
         </div>
-        <h2 className="text-3xl text-center font-bold tracking-tight text-red-600 sm:text-4xl">
+        <h2 className="text-center text-3xl font-bold tracking-tight text-red-600 sm:text-4xl">
           Szkoła jazdy Strażak
         </h2>
         <p className="mt-6 px-5 text-lg leading-8 text-gray-600">
@@ -39,6 +37,4 @@ const index: FC<KontaktProps> = ({}) => {
       <Contact />
     </>
   );
-};
-
-export default index;
+}

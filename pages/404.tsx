@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { FC } from 'react';
 
-const index: FC = ({}) => {
+export default function Index() {
   return (
     <>
       <Head>
@@ -30,6 +30,4 @@ const index: FC = ({}) => {
       </section>
     </>
   );
-};
-
-export default index;
+}

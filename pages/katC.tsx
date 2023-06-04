@@ -1,8 +1,7 @@
-import Head from "next/head";
-import { FC } from "react";
-import Registration from "@/components/Registration";
+import Head from 'next/head';
+import Registration from '@/components/Registration';
 
-const index: FC = () => {
+export default function Index() {
   return (
     <>
       <Head>
@@ -14,6 +13,4 @@ const index: FC = () => {
       <Registration />
     </>
   );
-};
-
-export default index;
+}

@@ -1,9 +1,8 @@
-import KatA from "@/components/KatB";
-import Registration from "@/components/Registration";
-import Head from "next/head";
-import { FC } from "react";
+import KatA from '@/components/KatB';
+import Registration from '@/components/Registration';
+import Head from 'next/head';
 
-const index: FC = ({}) => {
+export default function Index() {
   return (
     <>
       <Head>
@@ -15,6 +14,4 @@ const index: FC = ({}) => {
       <Registration />
     </>
   );
-};
-
-export default index;
+}
