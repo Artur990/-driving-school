@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const KatBECart = () => {
   return (
-    <div className="ring-grey-400 m-4 max-w-[1600px]  rounded-3xl bg-gray-100 p-2  font-sans  text-gray-900  antialiased ring-1 sm:m-7 2xl:mx-auto">
+    <div className="cartKat">
       <h1 className="mb-4 text-center text-4xl font-bold">Kategoria B + E</h1>
       <div className="h-full w-full lg:flex">
         <div className=" flex w-full flex-col lg:w-1/2 ">
@@ -93,7 +93,7 @@ const KatBECart = () => {
             </ul>
           </div>
         </div>
-        <div className="container mx-auto  w-full p-6 lg:w-1/2">
+        <div className="container mx-auto  w-full p-0 lg:w-1/2">
           <KatCart title="To oferujemy:" imgSrc="/logo2.png">
             <ul className="mb-4 list-disc pl-5">
               <li className="list-disc font-medium text-red-500  ">

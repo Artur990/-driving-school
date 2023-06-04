@@ -1,11 +1,11 @@
-import { FC } from "react";
+import { useRegistrationForm } from '@/hooks/useRegistrationForm';
+import { FC } from 'react';
 
-interface RegistrationFormProps {}
-
-const RegistrationForm: FC<RegistrationFormProps> = ({}) => {
+const RegistrationForm: FC<{}> = ({}) => {
+  const formik = useRegistrationForm();
   return (
     <form
-      // onSubmit={formik.handleSubmit}
+      onSubmit={formik.handleSubmit}
       action="#"
       method="POST"
       className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2"
@@ -18,18 +18,18 @@ const RegistrationForm: FC<RegistrationFormProps> = ({}) => {
           Imię i Nazwisko
         </label>
         <input
-          // value={formik.values.firstName}
-          // onChange={formik.handleChange}
+          value={formik.values.name}
+          onChange={formik.handleChange}
           placeholder="Imię"
           type="text"
-          name="firstName"
-          id="firstName"
+          name="name"
+          id="name"
           autoComplete="given-name"
           className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
         />
-        {/* {formik.touched.firstName && formik.errors.firstName && (
-            <div className="text-red-600">{formik.errors.firstName}</div>
-          )} */}
+        {formik.touched.name && formik.errors.name && (
+          <div className="text-red-600">{formik.errors.name}</div>
+        )}
       </div>
 
       <div className="col-span-2">
@@ -40,8 +40,8 @@ const RegistrationForm: FC<RegistrationFormProps> = ({}) => {
           Email
         </label>
         <input
-          //   value={formik.values.email}
-          //   onChange={formik.handleChange}
+          value={formik.values.email}
+          onChange={formik.handleChange}
           placeholder="Email"
           type="email"
           name="email"
@@ -49,20 +49,20 @@ const RegistrationForm: FC<RegistrationFormProps> = ({}) => {
           autoComplete="email"
           className="block w-full rounded-md border-0   px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
         />
-        {/* {formik.touched.email && formik.errors.email && (
-<div className="text-red-600">{formik.errors.email}</div>
-)} */}
+        {formik.touched.email && formik.errors.email && (
+          <div className="text-red-600">{formik.errors.email}</div>
+        )}
       </div>
       <div className="col-span-2">
         <label
           htmlFor="phone-number"
-          className="block text-sm font-semibold ring-indigo-600 leading-6 text-gray-900"
+          className="block text-sm font-semibold leading-6 text-gray-900 ring-indigo-600"
         >
           Numer telefonu
         </label>
         <input
-          //   value={formik.values.phoneNumber}
-          //   onChange={formik.handleChange}
+          value={formik.values.phoneNumber}
+          onChange={formik.handleChange}
           placeholder="Numer telefonu"
           type="phoneNumber"
           name="phoneNumber"
@@ -70,9 +70,9 @@ const RegistrationForm: FC<RegistrationFormProps> = ({}) => {
           autoComplete="phoneNumber"
           className="block w-full rounded-md border-0  px-3.5 py-2 pl-4   text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
         />
-        {/* {formik.touched.phoneNumber && formik.errors.phoneNumber && (
-<div className="text-red-600">{formik.errors.phoneNumber}</div>
-)} */}
+        {formik.touched.phoneNumber && formik.errors.phoneNumber && (
+          <div className="text-red-600">{formik.errors.phoneNumber}</div>
+        )}
       </div>
       <div className="col-span-2">
         <label
@@ -83,8 +83,8 @@ const RegistrationForm: FC<RegistrationFormProps> = ({}) => {
         </label>
         <div className="mt-2.5">
           <input
-            // value={preferredDate}
-            // onChange={handleDateChange}
+            value={formik.values.preferredDate}
+            onChange={formik.handleChange}
             placeholder="Dogodna data kursu"
             type="text"
             name="preferredDate"
@@ -101,19 +101,19 @@ const RegistrationForm: FC<RegistrationFormProps> = ({}) => {
           WYŚLIJ WIADOMOŚĆ
         </label>
         <textarea
-          //   value={formik.values.message}
-          //   onChange={formik.handleChange}
+          value={formik.values.message}
+          onChange={formik.handleChange}
           placeholder="Wiadomość"
           name="message"
           id="message"
           rows={4}
           className="block w-full rounded-md  border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
         />
-        {/* {formik.touched.message && formik.errors.message && (
-<div className="text-red-600">{formik.errors.message}</div>
-)} */}
+        {formik.touched.message && formik.errors.message && (
+          <div className="text-red-600">{formik.errors.message}</div>
+        )}
       </div>
-      <div className="mt-10 col-span-2">
+      <div className="col-span-2 mt-10">
         <button
           type="submit"
           className="block w-full rounded-md bg-[#d71f27] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500

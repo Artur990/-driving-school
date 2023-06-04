@@ -1,8 +1,8 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const Car = () => {
   return (
-    <div className="bg-gray-100 mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-400 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+    <div className="cartOfert">
       <div className="p-8 sm:p-10 lg:flex-auto">
         <h3 className="text-2xl font-bold tracking-tight text-gray-900">
           Kurs kat. B
@@ -14,13 +14,13 @@ const Car = () => {
           umiejętności, które otworzą przed Tobą nowe możliwości. Nasze
           elastyczne harmonogramy, nowoczesne metody nauczania i konkurencyjne
           ceny sprawiają, że jest to idealny moment, aby podjąć decyzję. Zapisz
-          się już dzisiaj i zacznij swoją drogę do samodzielnej jazdy!{" "}
-          <Link href="katB" className="text-red-500 text-lg font-semibold">
+          się już dzisiaj i zacznij swoją drogę do samodzielnej jazdy!{' '}
+          <Link href="katB" className="text-lg font-semibold text-red-500">
             Więcej szegółów..
           </Link>
         </p>
         <div className="mt-10 flex items-center gap-x-4">
-          <h4 className="flex-none text-sm  leading-6 text-black-600 font-bold">
+          <h4 className="text-black-600 flex-none  text-sm font-bold leading-6">
             To oferujemy:
           </h4>
           <div className="h-px flex-auto bg-gray-400"></div>

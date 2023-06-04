@@ -36,7 +36,7 @@ const steps = [
 ];
 export default function FiveSteps() {
   return (
-    <>
+    <section>
       <div id="five-steps" className=" bg-zinc-800 py-10 min-w-[420px]">
         <h1 className="text-center relative z-9 text-3xl  xl:text-4xl p-10 text-red-600 font-extrabold">
           Prawo jazdy w 5 krokach
@@ -57,6 +57,6 @@ export default function FiveSteps() {
           <div className="w-0 h-0 border-l-15 border-r-15 border-transparent border-b-30 border-solid border-red-500 bg-red-500"></div>
         </div>
       </div>
-    </>
+    </section>
   );
 }

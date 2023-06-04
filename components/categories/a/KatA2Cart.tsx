@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const katA2Cart = ({}) => {
   return (
-    <div className="ring-grey-400 m-4 max-w-[1500px]  rounded-3xl bg-gray-100 p-2  font-sans  text-gray-900  antialiased ring-1 sm:m-7 2xl:mx-auto">
+    <div className="cartKat">
       <h1 className="mb-4 text-center text-4xl font-bold">Kategoria A2</h1>
       <div className="h-full w-full lg:flex">
         <div className=" flex w-full flex-col lg:w-1/2 ">

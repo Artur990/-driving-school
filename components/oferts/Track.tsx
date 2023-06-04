@@ -1,8 +1,8 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const Track = ({}) => {
   return (
-    <div className="bg-gray-100 mx-auto mt-16 max-w-2xl rounded-3xl  ring-1 ring-gray-400 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+    <div className="cartOfert">
       <div className="p-8 sm:p-10 lg:flex-auto">
         <h3 className="text-2xl font-bold tracking-tight text-gray-900">
           Kurs kat. C i C + E
@@ -15,13 +15,13 @@ const Track = ({}) => {
           Nasze elastyczne harmonogramy, nowoczesne metody nauczania i
           konkurencyjne ceny sprawiają, że jest to idealny moment, aby podjąć
           decyzję. Zapisz się już dzisiaj i zacznij swoją drogę do samodzielnej
-          jazdy!{" "}
-          <Link href="katC" className="text-red-500 text-lg font-semibold">
+          jazdy!{' '}
+          <Link href="katC" className="text-lg font-semibold text-red-500">
             Więcej szegółów..
           </Link>
         </p>
         <div className="mt-10 flex items-center gap-x-4">
-          <h4 className="flex-none text-sm  leading-6 text-black font-bold">
+          <h4 className="flex-none text-sm  font-bold leading-6 text-black">
             To oferujemy:
           </h4>
           <div className="h-px flex-auto bg-gray-400" />
@@ -112,13 +112,13 @@ const Track = ({}) => {
             <div className="flex">
               <Link
                 href="Zapiszsie"
-                className="mt-5 mr-2 block w-full rounded-md bg-red-600 px-3 py-2 text-center text-base font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="mr-2 mt-5 block w-full rounded-md bg-red-600 px-3 py-2 text-center text-base font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Zapisz się
               </Link>
               <Link
                 href="Kontakt"
-                className="mt-5 ml-2 block w-full rounded-md bg-indigo-500 px-3 py-2 text-center text-base font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="ml-2 mt-5 block w-full rounded-md bg-indigo-500 px-3 py-2 text-center text-base font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Mam pytanie
               </Link>
