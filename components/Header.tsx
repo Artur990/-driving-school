@@ -1,31 +1,31 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
-import { AiOutlineCheckCircle } from "react-icons/ai";
+import { AiOutlineCheckCircle } from 'react-icons/ai';
 
-import { BsArrowRightShort } from "react-icons/bs";
-import { MdDateRange } from "react-icons/md";
+import { BsArrowRightShort } from 'react-icons/bs';
+import { MdDateRange } from 'react-icons/md';
 const Header = () => {
   return (
-    <section className="h-[100vh] w-full min-w-[380px]">
+    <section className="mt-0 h-[100vh] w-full min-w-[380px]">
       <div className="relative h-screen bg-black">
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url(/about.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundImage: 'url(/about.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
             opacity: 0.5,
           }}
         />
-        <div className="container mt-0 mx-auto ml-0 flex h-auto w-3/4 flex-col items-start px-4 pt-10 sm:ml-12 sm:items-start md:ml-24 lg:ml-36 2xl:pl-28 2xl:pt-36">
-          <div className="z-10 mt-15 flex h-[250px] md:h-[200px] w-[350px] flex-col justify-between bg-[#d71f27] sm:h-[180px] sm:w-[550px] md:w-[550px] lg:w-[600px]">
+        <div className="container mx-auto ml-0 mt-0 flex h-auto w-3/4 flex-col items-start px-4 pt-10 sm:ml-12 sm:items-start md:ml-24 lg:ml-36 2xl:pl-28 2xl:pt-36">
+          <div className="mt-15 z-10 flex h-[250px] w-[350px] flex-col justify-between bg-[#d71f27] sm:h-[180px] sm:w-[550px] md:h-[200px] md:w-[550px] lg:w-[600px]">
             <div className="custom-divider relative bottom-3 py-0" />
-            <h1 className="p-1 text-center text-2xl text-white sm:text-3xl md:text-5xl font-extrabold">
+            <h1 className="p-1 text-center text-2xl font-extrabold text-white sm:text-3xl md:text-5xl">
               SZKOŁA JAZDY STRAŻAK
             </h1>
-            <div className="relative z-11  flex h-1/4 sm:h-1/4 w-full items-center bg-white p-1 text-base font-bold text-black sm:left-5 md:text-xl">
-              <h2 className=" p-auto text-xs sm:text-base md:text-base text-center">
+            <div className="z-11 relative  flex h-1/4 w-full items-center bg-white p-1 text-base font-bold text-black sm:left-5 sm:h-1/4 md:text-xl">
+              <h2 className=" p-auto text-center text-xs sm:text-base md:text-base">
                 Z nami zdanie egzaminu za pierwszym razem będzie łatwiejsze!
               </h2>
             </div>
@@ -47,14 +47,14 @@ const Header = () => {
               id="atuty"
               className="relative mt-4 w-60 bg-transparent md:bottom-20 md:left-96"
             >
-              <div className=" text-white font-bold text-lg relative z-20">
+              <div className=" relative z-20 text-lg font-bold text-white">
                 <p className=" p-4">Następne termionny:</p>
               </div>
               <div className="cart  bg-white">
                 <i className="icon bg-white">
                   <MdDateRange className="h-8 w-8" />
                 </i>
-                <p className="bg-white">22.05.2023 godz. 16:30</p>
+                <p className="bg-white">22.06.2023 godz. 16:30</p>
               </div>
 
               <div className="custom-divider" />

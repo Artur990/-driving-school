@@ -16,7 +16,10 @@ const Track = ({}) => {
           konkurencyjne ceny sprawiają, że jest to idealny moment, aby podjąć
           decyzję. Zapisz się już dzisiaj i zacznij swoją drogę do samodzielnej
           jazdy!{' '}
-          <Link href="katC" className="text-lg font-semibold text-red-500">
+          <Link
+            href="katC"
+            className="text-lg font-semibold text-red-500 underline"
+          >
             Więcej szegółów..
           </Link>
         </p>

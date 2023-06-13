@@ -1,28 +1,28 @@
-import { FaCar, FaMotorcycle, FaTruckMoving, FaBusAlt } from "react-icons/fa";
+import { FaCar, FaMotorcycle, FaTruckMoving, FaBusAlt } from 'react-icons/fa';
 
-import { FC, useEffect, useState } from "react";
-import { GrGallery } from "react-icons/gr";
+import { FC, useEffect, useState } from 'react';
+import { GrGallery } from 'react-icons/gr';
 
-import { useRouter } from "next/router";
-import Link from "next/link";
-import Image from "next/image";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Nav() {
   const router = useRouter();
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [openMobile, SetIsOpenMobile] = useState<boolean>(false);
-  const [activePage, setActivePage] = useState<string>("");
+  const [activePage, setActivePage] = useState<string>('');
 
   const handleNavigation = (target: string, href: string) => {
-    if (window.location.pathname === "/") {
+    if (window.location.pathname === '/') {
       const element = document.getElementById(target);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({ behavior: 'smooth' });
         setIsOpen(false);
       }
     } else {
-      window.location.href = href + "?section=" + target;
+      window.location.href = href + '?section=' + target;
       setIsOpen(false);
     }
   };
@@ -35,38 +35,38 @@ export default function Nav() {
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      const lastSegment = url.split("/").pop();
+      const lastSegment = url.split('/').pop();
 
-      if (lastSegment === "Galeria") {
-        setActivePage("Galeria");
-      } else if (lastSegment === "Onas") {
-        setActivePage("Onas");
-      } else if (lastSegment === "Kontakt") {
-        setActivePage("Kontakt");
-      } else if (lastSegment === "katB" || lastSegment === "katA") {
-        setActivePage("Nasze kursy");
-      } else if (lastSegment === "co-nas-wyroznia") {
-        setActivePage("section=co-nas-wyroznia");
+      if (lastSegment === 'Galeria') {
+        setActivePage('Galeria');
+      } else if (lastSegment === 'Onas') {
+        setActivePage('Onas');
+      } else if (lastSegment === 'Kontakt') {
+        setActivePage('Kontakt');
+      } else if (lastSegment === 'katB' || lastSegment === 'katA') {
+        setActivePage('Nasze kursy');
+      } else if (lastSegment === 'co-nas-wyroznia') {
+        setActivePage('section=co-nas-wyroznia');
       } else {
-        setActivePage("");
+        setActivePage('');
       }
     };
 
-    router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on('routeChangeComplete', handleRouteChange);
 
     return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
+      router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, []);
   return (
-    <header className=" relative z-40 bg-white">
+    <header className=" relative left-0 right-0 top-0 z-50 ">
       <nav
-        className="mx-auto w-full h-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex  h-auto w-full max-w-7xl items-center justify-between border-b border-gray-400 bg-white p-1 shadow-sm backdrop-blur-md lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">Firma szkoła jazdyy</span>
             <Image
               height={100}
               width={100}
@@ -81,22 +81,23 @@ export default function Nav() {
             type="button"
             className={`flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 
               ${
-                activePage.toLowerCase() === "nasze kursy"
-                  ? " border-b-4 border-red-600"
-                  : " link-with-border "
+                activePage.toLowerCase() === 'nasze kursy'
+                  ? ' border-b-4 border-red-600'
+                  : ' link-with-border '
               }`}
             aria-expanded="false"
             onClick={toggleMenuMobile}
           >
             MENU
+            <span className="sr-only">otwórz główne menu</span>
             <svg
               className="h-5 w-5 flex-none text-gray-400"
               viewBox="0 0 20 20"
               fill="currentColor"
               aria-hidden="true"
               style={{
-                transform: isOpen ? "rotate(180deg)" : "rotate(0)",
-                transition: "transform 0.3s ease-in-out",
+                transform: isOpen ? 'rotate(180deg)' : 'rotate(0)',
+                transition: 'transform 0.3s ease-in-out',
               }}
             >
               <path
@@ -111,24 +112,24 @@ export default function Nav() {
           <div className="relative">
             <button
               type="button"
-              className={` flex items-center font-regular  gap-x-1 text-sm font-semibold leading-6 text-gray-900
+              className={` font-regular flex items-center  gap-x-1 text-sm font-semibold leading-6 text-gray-900
               ${
-                activePage.toLowerCase() === "nasze kursy"
-                  ? " border-b-4 border-red-600"
-                  : " link-with-border "
+                activePage.toLowerCase() === 'nasze kursy'
+                  ? ' border-b-4 border-red-600'
+                  : ' link-with-border '
               }`}
               aria-expanded="false"
               onClick={toggleMenu}
             >
               Nasze kursy
               <svg
-                className="h-5 w-5 flex-none text-gray-400 link-with-border "
+                className="link-with-border h-5 w-5 flex-none text-gray-400 "
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 aria-hidden="true"
                 style={{
-                  transform: isOpen ? "rotate(180deg)" : "rotate(0)",
-                  transition: "transform 0.3s ease-in-out",
+                  transform: isOpen ? 'rotate(180deg)' : 'rotate(0)',
+                  transition: 'transform 0.3s ease-in-out',
                 }}
               >
                 <path
@@ -253,7 +254,7 @@ export default function Nav() {
                     Galeria
                   </Link>
                   <div
-                    onClick={() => handleNavigation("five-steps", "/")}
+                    onClick={() => handleNavigation('five-steps', '/')}
                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-200"
                   >
                     Prawo jazdy w 5 ktrokach
@@ -264,21 +265,21 @@ export default function Nav() {
           </div>
 
           <Link
-            href={"/Onas"}
-            className={`text-sm font-semibold  leading-6 ext-gray-900 ${
-              activePage.toLowerCase() === "onas"
-                ? " border-b-4 border-red-600"
-                : " link-with-border "
+            href={'/Onas'}
+            className={`ext-gray-900 text-sm  font-semibold leading-6 ${
+              activePage.toLowerCase() === 'onas'
+                ? ' border-b-4 border-red-600'
+                : ' link-with-border '
             }`}
           >
             O NAS
           </Link>
           <Link
             href="/Kontakt"
-            className={`text-sm font-semibold  leading-6 ext-gray-900 ${
-              activePage.toLowerCase() === "kontakt"
-                ? " border-b-4 border-red-600"
-                : " link-with-border "
+            className={`ext-gray-900 text-sm  font-semibold leading-6 ${
+              activePage.toLowerCase() === 'kontakt'
+                ? ' border-b-4 border-red-600'
+                : ' link-with-border '
             }`}
           >
             KONTAKT
@@ -286,21 +287,21 @@ export default function Nav() {
 
           <Link
             href="Galeria"
-            className={`text-sm font-semibold  leading-6 ext-gray-900 ${
-              activePage.toLowerCase() === "galeria"
-                ? "text-red-600 border-b-4 border-red-600"
-                : " link-with-border "
+            className={`ext-gray-900 text-sm  font-semibold leading-6 ${
+              activePage.toLowerCase() === 'galeria'
+                ? 'border-b-4 border-red-600 text-red-600'
+                : ' link-with-border '
             }`}
           >
             GALERIA
           </Link>
 
           <div
-            onClick={() => handleNavigation("co-nas-wyroznia", "/")}
-            className={`text-sm font-semibold  leading-6 ext-gray-900 ${
-              activePage.toLowerCase() === "section=co-nas-wyroznia"
-                ? "text-red-600 border-b-4 border-red-600"
-                : " link-with-border "
+            onClick={() => handleNavigation('co-nas-wyroznia', '/')}
+            className={`ext-gray-900 text-sm  font-semibold leading-6 ${
+              activePage.toLowerCase() === 'section=co-nas-wyroznia'
+                ? 'border-b-4 border-red-600 text-red-600'
+                : ' link-with-border '
             }`}
           >
             CO NAS WYRÓŻNIA?
@@ -309,7 +310,7 @@ export default function Nav() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             href="/Zapiszsie"
-            className="text-lg font-semibold leading-6  text-white bg-red-600 lg:text-base lg:px-3 lg:py-2  px-1 xl:px-8 xl:text-lg py-2 rounded hover:bg-indigo-500"
+            className="rounded bg-red-600 px-1  py-2 text-lg font-semibold leading-6 text-white  hover:bg-indigo-500 lg:px-3 lg:py-2 lg:text-base xl:px-8 xl:text-lg"
           >
             ZAPISZ SIĘ ONLINE
           </Link>
@@ -363,7 +364,7 @@ export default function Nav() {
                     <div className="-mx-3">
                       <button
                         type="button"
-                        className="flex items-center pl-2 gap-x-1 text-lg font-semibold leading-6 text-gray-900"
+                        className="flex items-center gap-x-1 pl-2 text-lg font-semibold leading-6 text-gray-900"
                         aria-expanded="false"
                         onClick={toggleMenu}
                       >
@@ -374,8 +375,8 @@ export default function Nav() {
                           fill="currentColor"
                           aria-hidden="true"
                           style={{
-                            transform: isOpen ? "rotate(180deg)" : "rotate(0)",
-                            transition: "transform 0.3s ease-in-out",
+                            transform: isOpen ? 'rotate(180deg)' : 'rotate(0)',
+                            transition: 'transform 0.3s ease-in-out',
                           }}
                         >
                           <path
@@ -448,7 +449,7 @@ export default function Nav() {
                       GALERIA
                     </Link>
                     <div
-                      onClick={() => handleNavigation("co-nas-wyroznia", "/")}
+                      onClick={() => handleNavigation('co-nas-wyroznia', '/')}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200"
                     >
                       CO NAS WYRÓŻNIA?
@@ -459,7 +460,7 @@ export default function Nav() {
                     <Link
                       href="Zapiszsie"
                       onClick={toggleMenuMobile}
-                      className="bg-red-700 text-white text-center -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7  hover:bg-indigo-500"
+                      className="-mx-3 block rounded-lg bg-red-700 px-3 py-2.5 text-center text-base font-semibold leading-7 text-white  hover:bg-indigo-500"
                     >
                       ZAPISZ SIĘ ONILNE
                     </Link>
