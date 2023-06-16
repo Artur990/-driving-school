@@ -113,14 +113,14 @@ const Car = () => {
             <del>2600 zł</del>
             <div className="flex">
               <Link
-                href="Zapiszsie"
-                className="mr-2 mt-5 block w-full rounded-md bg-red-600 px-3 py-2 text-center text-base font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                href="zapiszsie"
+                className="mr-2 mt-5 block w-full rounded-md bg-red-600 px-3 py-2 text-center text-base font-semibold text-white shadow-sm hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Zapisz się
               </Link>
               <Link
                 href="Kontakt"
-                className="ml-2 mt-5 block w-full rounded-md bg-indigo-500 px-3 py-2 text-center text-base font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="hover:opacity-80focus-visible:outline ml-2 mt-5 block w-full rounded-md bg-indigo-500 px-3 py-2 text-center text-base font-semibold text-white shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Mam pytanie
               </Link>

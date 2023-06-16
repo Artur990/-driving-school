@@ -37,12 +37,12 @@ export default function Nav() {
     const handleRouteChange = (url: string) => {
       const lastSegment = url.split('/').pop();
 
-      if (lastSegment === 'Galeria') {
-        setActivePage('Galeria');
-      } else if (lastSegment === 'Onas') {
-        setActivePage('Onas');
-      } else if (lastSegment === 'Kontakt') {
-        setActivePage('Kontakt');
+      if (lastSegment === 'galeria') {
+        setActivePage('galeria');
+      } else if (lastSegment === 'onas') {
+        setActivePage('onas');
+      } else if (lastSegment === 'kontakt') {
+        setActivePage('kontakt');
       } else if (lastSegment === 'katB' || lastSegment === 'katA') {
         setActivePage('Nasze kursy');
       } else if (lastSegment === 'co-nas-wyroznia') {
@@ -235,7 +235,7 @@ export default function Nav() {
                     </div>
                     <div className="flex-auto">
                       <Link
-                        href="/Kod95"
+                        href="/kod95"
                         className="block font-semibold text-gray-900"
                       >
                         kod95<span className="absolute inset-0"></span>
@@ -246,26 +246,26 @@ export default function Nav() {
                 </div>
                 <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                   <Link
-                    href="/Galeria"
+                    href="/galeria"
                     onClick={() => setIsOpen(false)}
                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-200"
                   >
                     <GrGallery />
-                    Galeria
+                    galeria
                   </Link>
-                  <div
-                    onClick={() => handleNavigation('five-steps', '/')}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-200"
+                  <button
+                    onClick={() => handleNavigation('w-5-krokach', '/')}
+                    className="flex  items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-200"
                   >
                     Prawo jazdy w 5 ktrokach
-                  </div>
+                  </button>
                 </div>
               </div>
             )}
           </div>
 
           <Link
-            href={'/Onas'}
+            href={'/onas'}
             className={`ext-gray-900 text-sm  font-semibold leading-6 ${
               activePage.toLowerCase() === 'onas'
                 ? ' border-b-4 border-red-600'
@@ -275,30 +275,30 @@ export default function Nav() {
             O NAS
           </Link>
           <Link
-            href="/Kontakt"
+            href="/kontakt"
             className={`ext-gray-900 text-sm  font-semibold leading-6 ${
               activePage.toLowerCase() === 'kontakt'
                 ? ' border-b-4 border-red-600'
                 : ' link-with-border '
             }`}
           >
-            KONTAKT
+            kontakt
           </Link>
 
           <Link
-            href="Galeria"
+            href="galeria"
             className={`ext-gray-900 text-sm  font-semibold leading-6 ${
               activePage.toLowerCase() === 'galeria'
                 ? 'border-b-4 border-red-600 text-red-600'
                 : ' link-with-border '
             }`}
           >
-            GALERIA
+            galeria
           </Link>
 
           <div
             onClick={() => handleNavigation('co-nas-wyroznia', '/')}
-            className={`ext-gray-900 text-sm  font-semibold leading-6 ${
+            className={`ext-gray-900 text-sm   font-semibold leading-6 ${
               activePage.toLowerCase() === 'section=co-nas-wyroznia'
                 ? 'border-b-4 border-red-600 text-red-600'
                 : ' link-with-border '
@@ -309,7 +309,7 @@ export default function Nav() {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
-            href="/Zapiszsie"
+            href="/zapiszsie"
             className="rounded bg-red-600 px-1  py-2 text-lg font-semibold leading-6 text-white  hover:bg-indigo-500 lg:px-3 lg:py-2 lg:text-base xl:px-8 xl:text-lg"
           >
             ZAPISZ SIĘ ONLINE
@@ -418,35 +418,35 @@ export default function Nav() {
                             Kat, D
                           </Link>
                           <Link
-                            href="/Kod95"
+                            href="/kod95"
                             onClick={toggleMenuMobile}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-200"
                           >
-                            KWALIFIKACJE Kod95
+                            KWALIFIKACJE kod95
                           </Link>
                         </div>
                       )}
                     </div>
                     <Link
-                      href="/Onas"
+                      href="/onas"
                       onClick={toggleMenuMobile}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200"
                     >
                       O NAS
                     </Link>
                     <Link
-                      href="/Kontakt"
+                      href="/kontakt"
                       onClick={toggleMenuMobile}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200"
                     >
-                      KONTAKT
+                      kontakt
                     </Link>
                     <Link
-                      href="/Galeria"
+                      href="/galeria"
                       onClick={toggleMenuMobile}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200"
                     >
-                      GALERIA
+                      galeria
                     </Link>
                     <div
                       onClick={() => handleNavigation('co-nas-wyroznia', '/')}
@@ -458,7 +458,7 @@ export default function Nav() {
 
                   <div className="py-6">
                     <Link
-                      href="Zapiszsie"
+                      href="zapiszsie"
                       onClick={toggleMenuMobile}
                       className="-mx-3 block rounded-lg bg-red-700 px-3 py-2.5 text-center text-base font-semibold leading-7 text-white  hover:bg-indigo-500"
                     >

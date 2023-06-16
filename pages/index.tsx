@@ -1,12 +1,12 @@
-import Header from "@/components/Header";
-import Gallery from "@/components/Gallery";
-import FiveSteps from "@/components/FiveSteps";
-import Distinguishes from "@/components/Distinguishes";
-import Features from "@/components/Features";
-import Carousel from "@/components/Carousel";
-import Head from "next/head";
-import Oferts from "@/components/Oferts";
-import Registration from "@/components/Registration";
+import Header from '@/components/Header';
+import Gallery from '@/components/Gallery';
+import FiveSteps from '@/components/FiveSteps';
+import Distinguishes from '@/components/Distinguishes';
+import Features from '@/components/Features';
+import Carousel from '@/components/Carousel';
+import Head from 'next/head';
+import Oferts from '@/components/Oferts';
+import Registration from '@/components/Registration';
 
 export default function Home() {
   return (

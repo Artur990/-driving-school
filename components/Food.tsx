@@ -71,7 +71,7 @@ const Food = () => {
           <GoogleMapComponent />
         </div>
       </div>
-      <div className="mx-auto mb-20 flex h-[200px] w-full items-center justify-center bg-stone-900 lg:w-[95%] ">
+      <div className="mx-auto  flex h-[200px] w-full items-center justify-center bg-stone-900 lg:w-[95%] ">
         <h2 className="text-center text-white">
           © 2022 Wszelkie prawa zastrzeżone. Szkoła jazdy Strażak Bydgoszcz
           Polityka Prywatności
