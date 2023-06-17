@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React from 'react';
 import SliderGallery from '../components/SliderGallery';
 import Head from 'next/head';
 import Registration from '@/components/Registration';
@@ -15,7 +15,7 @@ const images = [
   '/o-nas/o-nas8.jpg',
 ];
 
-const index: FC = ({}) => {
+const index = ({}) => {
   return (
     <>
       <Head>
