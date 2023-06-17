@@ -1,5 +1,6 @@
-import Registration from "@/components/Registration";
-import Head from "next/head";
+import React from 'react';
+import Registration from '@/components/Registration';
+import Head from 'next/head';
 
 export default function Index() {
   return (

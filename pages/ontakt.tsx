@@ -1,7 +1,9 @@
-import Contact from '@/components/Contact';
+import React from 'react';
+
 import Head from 'next/head';
 import Image from 'next/image';
-import { FC } from 'react';
+
+import Contact from '@/components/Contact';
 
 export default function Index() {
   return (

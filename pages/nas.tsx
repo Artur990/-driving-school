@@ -1,5 +1,8 @@
+import React from 'react';
+
 import Head from 'next/head';
 import Image from 'next/image';
+
 import Registration from '@/components/Registration';
 import InstructorCard from '@/components/ui/InstructorCard';
 
