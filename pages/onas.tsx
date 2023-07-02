@@ -29,9 +29,9 @@ export default function Index() {
         <link rel="icon" href="/logo.jpg" />
       </Head>
 
-      <section className=" py-10">
-        <div className="mx-auto bg-[#F7FBFC] px-1">
-          <h1 className="mb-8 text-center text-2xl font-bold ">
+      <section className=" bg-[#F7FBFC] py-16">
+        <div className="mx-auto  px-1">
+          <h1 className="mb-8 text-center text-4xl font-bold ">
             Szkoła Jazdy Strażak w Bydgoszczy
           </h1>
           <p className="text-gray-800, mb-8 px-10 text-lg ">

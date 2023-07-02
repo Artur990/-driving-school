@@ -3,8 +3,10 @@ import Image from 'next/image';
 
 const katA2Cart = ({}) => {
   return (
-    <div className="cartKat">
-      <h1 className="mb-4 text-center text-4xl font-bold">Kategoria A2</h1>
+    <section className="cartKat container mx-auto">
+      <h1 className="pb-10 pt-6 text-center text-4xl font-bold">
+        Kategoria A2
+      </h1>
       <div className="h-full w-full lg:flex">
         <div className=" flex w-full flex-col lg:w-1/2 ">
           <Image
@@ -146,7 +148,7 @@ const katA2Cart = ({}) => {
           </KatCart>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

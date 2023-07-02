@@ -4,7 +4,7 @@ import Image from 'next/image';
 const KatBCart = () => {
   return (
     <div className="cartKat">
-      <h1 className="mb-4 text-center text-4xl font-bold">Kategoria B</h1>
+      <h1 className="pb-10 pt-6 text-center text-4xl font-bold">Kategoria B</h1>
       <div className="h-full w-full lg:flex">
         <div className=" flex w-full flex-col lg:w-1/2 ">
           <Image

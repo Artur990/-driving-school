@@ -9,7 +9,7 @@ import Image from 'next/image';
 const Oferts = () => {
   const [activeTab, setActiveTab] = useState('car');
   return (
-    <section className=" bg-white py-12 sm:py-10">
+    <section className="container mx-auto bg-white py-16 ">
       <div className="mx-auto max-w-7xl bg-white px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
           <div className="flex items-center justify-center">

@@ -1,22 +1,21 @@
-import { FC } from "react";
-import Form from "./ui/ContactForm";
-import { AiOutlineCheckCircle } from "react-icons/ai";
-import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
-import { BsArrowRightShort } from "react-icons/bs";
-import { TbBuildingSkyscraper } from "react-icons/tb";
-interface ContsctProps {}
+import { FC } from 'react';
+import Form from './ui/ContactForm';
+import { AiOutlineCheckCircle } from 'react-icons/ai';
+import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
+import { BsArrowRightShort } from 'react-icons/bs';
+import { TbBuildingSkyscraper } from 'react-icons/tb';
 
-const Contact: FC<ContsctProps> = ({}) => {
+const Contact = () => {
   return (
-    <section className="h-auto w-full lg:p-10 ">
-      <h2 className="hidden lg:block text-center mb-1 ml-6 mt-10  text-3xl  xl:text-4xl font-extrabold">
+    <section className="container mx-auto h-auto w-full lg:p-10 ">
+      <h2 className="mb-1 ml-6 mt-10 hidden text-center text-3xl  font-extrabold  lg:block xl:text-4xl">
         Masz pytanie?
         <br /> Skontaktuj się z nami!
       </h2>
       <div className="lg:flex">
-        <div className="relative mx-auto lg:w-1/2 w-full p-2   flex h-auto max-w-5xl items-start bg-white  sm:px-10  lg:px-0 24 2xl:h-[100vh]">
+        <div className="24 relative mx-auto flex h-auto   w-full max-w-5xl items-start bg-white p-2  sm:px-10  lg:w-1/2 lg:px-0 2xl:h-[100vh]">
           <div className="pt-20">
-            <h1 className="block lg:hidden mb-4 ml-6  text-4xl font-bold">
+            <h1 className="mb-4 ml-6 block text-4xl  font-bold lg:hidden">
               Skontaktuj się z nami!
             </h1>
             <p className="mb-8 ml-6 text-left text-xl">
@@ -58,11 +57,11 @@ const Contact: FC<ContsctProps> = ({}) => {
         {/* form */}
         <div
           id="form"
-          className="relative mx-auto  h-auto lg:w-1/2 w-4/5 max-w-5xl bg-white px-4 py-5 sm:px-10 lg:px-24"
+          className="relative mx-auto  h-auto w-4/5 max-w-5xl bg-white px-4 py-5 sm:px-10 lg:w-1/2 lg:px-24"
         >
-          <div className="isolate  z-30 bg-white py-4 sm:py-2 lg:px-0 8">
+          <div className="8  isolate z-30 bg-white py-4 sm:py-2 lg:px-0">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="lg:hidden text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:hidden">
                 FORMULARZ KONTAKTOWY
               </h2>
               <Form />

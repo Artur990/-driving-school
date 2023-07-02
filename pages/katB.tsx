@@ -1,4 +1,4 @@
-import KatA from '@/components/KatB';
+import KatB from '@/components/KatB';
 import Registration from '@/components/Registration';
 import Head from 'next/head';
 
@@ -10,8 +10,10 @@ export default function Index() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.jpg" />
       </Head>
-      <KatA />
-      <Registration />
+      <div className="container mx-auto max-w-7xl ">
+        <KatB />
+        <Registration />
+      </div>
     </>
   );
 }

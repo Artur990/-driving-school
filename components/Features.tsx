@@ -1,45 +1,45 @@
-import React from "react";
-import { FaCar, FaSmile, FaHeartbeat, FaMoneyCheckAlt } from "react-icons/fa";
+import React from 'react';
+import { FaCar, FaSmile, FaHeartbeat, FaMoneyCheckAlt } from 'react-icons/fa';
 
 export default function Features() {
   const features = [
     {
-      icon: <FaCar className="w-20 h-20 text-red-600" />,
-      title: "Nowe modele Toyoty",
+      icon: <FaCar className="h-20 w-20 text-red-600" />,
+      title: 'Nowe modele Toyoty',
       description:
-        "W naszym ośrodku będziesz jeździł nowym modelem Toyoty identycznym jak w WORD-ie.",
+        'W naszym ośrodku będziesz jeździł nowym modelem Toyoty identycznym jak w WORD-ie.',
     },
     {
-      icon: <FaSmile className="w-20 h-20 text-red-600" />,
-      title: "99% zadowolonych klientów",
+      icon: <FaSmile className="h-20 w-20 text-red-600" />,
+      title: '99% zadowolonych klientów',
       description:
-        "Nauczymy Cię przepisów, techniki kierowania i myślenia za kółkiem. Wszystko pod okiem instruktorów z anielską cierpliwością.",
+        'Nauczymy Cię przepisów, techniki kierowania i myślenia za kółkiem. Wszystko pod okiem instruktorów z anielską cierpliwością.',
     },
     {
-      icon: <FaHeartbeat className="w-20 h-20 text-red-600" />,
-      title: "Bez stresu",
+      icon: <FaHeartbeat className="h-20 w-20 text-red-600" />,
+      title: 'Bez stresu',
       description:
-        "W naszym Ośrodku pod okiem doświadczonych instruktorów nie musisz się stresować! Cierpliwość i wyrozumiałość - to ich główne cechy. Pozytywne podejście do Kursanta to nasza domena!",
+        'W naszym Ośrodku pod okiem doświadczonych instruktorów nie musisz się stresować! Cierpliwość i wyrozumiałość - to ich główne cechy. Pozytywne podejście do Kursanta to nasza domena!',
     },
     {
-      icon: <FaMoneyCheckAlt className="w-20 h-20 text-red-600" />,
-      title: "Atrakcyjne ceny rozbite w systemie ratalnym",
-      description: "Płatności możesz rozłożyć na 4 raty 0%.",
+      icon: <FaMoneyCheckAlt className="h-20 w-20 text-red-600" />,
+      title: 'Atrakcyjne ceny rozbite w systemie ratalnym',
+      description: 'Płatności możesz rozłożyć na 4 raty 0%.',
     },
   ];
 
   return (
-    <section className=" w-auto mx-2 px-4 text-white bg-zinc-800 lg:mx-10 py-32">
-      <div className="grid  -cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <section className="container  mx-auto  bg-zinc-800 px-4 py-32 text-white ">
+      <div className="-cols-1  grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((feature, index) => (
-          <div key={index} className=" rounded bg-transparent shadow p-6">
-            <div className="flex items-center justify-center  r  mb-5">
+          <div key={index} className=" rounded bg-transparent p-6 shadow">
+            <div className="r mb-5 flex  items-center  justify-center">
               {feature.icon}
             </div>
-            <h3 className="text-xl font-bold mb-2 text-center">
+            <h3 className="mb-2 text-center text-xl font-bold">
               {feature.title}
             </h3>
-            <p className="text-base text-gray-200 pl-3">
+            <p className="pl-3 text-base text-gray-200">
               {feature.description}
             </p>
           </div>

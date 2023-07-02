@@ -5,19 +5,19 @@ import { AiOutlineCheckCircle } from 'react-icons/ai';
 
 import { BsArrowRightShort } from 'react-icons/bs';
 import { MdDateRange } from 'react-icons/md';
+import Image from 'next/image';
 const Header = () => {
   return (
-    <section className="mt-0 h-[100vh] w-full min-w-[380px]">
+    <section className=" mt-0 h-[100vh] w-full min-w-[380px]">
       <div className="relative h-screen bg-black">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'url(/about.jpg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.5,
-          }}
-        />
+        <div className="absolute inset-0">
+          <Image
+            src="/about.jpg"
+            alt="About Image"
+            fill
+            className="opacity-50"
+          />
+        </div>
         <div className="container mx-auto ml-0 mt-0 flex h-auto w-3/4 flex-col items-start px-4 pt-10 sm:ml-12 sm:items-start md:ml-24 lg:ml-36 2xl:pl-28 2xl:pt-36">
           <div className="mt-15 z-10 flex h-[250px] w-[350px] flex-col justify-between bg-[#d71f27] sm:h-[180px] sm:w-[550px] md:h-[200px] md:w-[550px] lg:w-[600px]">
             <div className="custom-divider relative bottom-3 py-0" />
@@ -48,7 +48,7 @@ const Header = () => {
               className="relative mt-4 w-60 bg-transparent md:bottom-20 md:left-96"
             >
               <div className=" relative z-20 text-lg font-bold text-white">
-                <p className=" p-4">Następne termionny:</p>
+                <p className=" p-4">Następne termiony:</p>
               </div>
               <div className="cart  bg-white">
                 <i className="icon bg-white">

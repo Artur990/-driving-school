@@ -26,7 +26,7 @@ const GoogleMapComponent = () => {
 const Food = () => {
   return (
     <>
-      <div className=" mx-auto block  w-full  justify-between bg-zinc-800 text-white lg:flex lg:min-h-[70%] lg:w-[95%]  ">
+      <div className="container mx-auto block  w-full  justify-between bg-zinc-800 text-white lg:flex lg:min-h-[70%] lg:w-[95%]  ">
         <div className="flex w-full flex-col items-center  lg:w-1/2">
           <div className="flex w-full flex-col items-center   justify-center p-2 pb-0 lg:flex-row lg:items-start  xl:p-24 xl:pb-2    ">
             <Image
@@ -71,7 +71,7 @@ const Food = () => {
           <GoogleMapComponent />
         </div>
       </div>
-      <div className="mx-auto  flex h-[200px] w-full items-center justify-center bg-stone-900 lg:w-[95%] ">
+      <div className="mt-10  flex h-[130px] w-full items-center justify-center bg-stone-900 ">
         <h2 className="text-center text-white">
           © 2022 Wszelkie prawa zastrzeżone. Szkoła jazdy Strażak Bydgoszcz
           Polityka Prywatności

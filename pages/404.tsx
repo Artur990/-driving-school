@@ -1,11 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Index() {
   return (
     <>
       <Head>
-        <title>Szkoła jazdy Strażak -Nie znaleziono</title>
+        <title>Szkoła jazdy Strażak - Nie znaleziono</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.jpg" />
       </Head>
@@ -16,15 +17,15 @@ export default function Index() {
             Nie znaleziono
           </h1>
           <p className="mt-6 text-base leading-7 text-gray-600">
-            Przepraszamy, nie możemy znaleźć strony której szukasz.
+            Przepraszamy, nie możemy znaleźć strony, której szukasz.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="#"
+            <Link
+              href="/"
               className="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Wróć do strony głównej
-            </a>
+            </Link>
           </div>
         </div>
       </section>

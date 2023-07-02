@@ -13,7 +13,7 @@ export default function Index() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.jpg" />
       </Head>
-      <div className="mx-auto max-w-2xl sm:text-center">
+      <div className="mx-auto max-w-2xl py-16 sm:text-center">
         <div className="flex items-center justify-center">
           <Image
             width={100}

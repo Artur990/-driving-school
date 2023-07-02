@@ -36,8 +36,8 @@ const steps = [
 ];
 export default function FiveSteps() {
   return (
-    <section>
-      <div id="w-5-krokach" className=" min-w-[420px] bg-zinc-800 py-10">
+    <section className="container mx-auto">
+      <div id="w-5-krokach" className=" min-w-[420px] bg-zinc-800 py-16">
         <h1 className="z-9 relative p-10 text-center  text-3xl font-extrabold text-red-600 xl:text-4xl">
           Prawo jazdy w 5 krokach
         </h1>

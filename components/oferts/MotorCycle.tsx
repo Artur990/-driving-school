@@ -113,7 +113,7 @@ const MotorCycle = () => {
             <del>2400 zł</del>
             <div className="flex">
               <Link
-                href="zapiszsie"
+                href="zapisz-sie"
                 className="hover:opacity-80focus-visible:outline mr-2 mt-5 block w-full rounded-md bg-red-600 px-3 py-2 text-center text-base font-semibold text-white shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Zapisz się

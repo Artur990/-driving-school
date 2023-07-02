@@ -10,7 +10,7 @@ interface KatCartProps {
 const KatCart: FC<KatCartProps> = ({ title, children, imgSrc }) => {
   return (
     <div
-      className="max-w-md. md:max-w-3xl. w-full] m-1 mx-auto my-3 transform overflow-hidden rounded-xl transition-transform duration-200 ease-in-out hover:scale-105 sm:m-3 lg:m-4"
+      className="w-full] m-1 mx-auto my-3 max-w-md transform overflow-hidden rounded-xl transition-transform duration-200 ease-in-out  sm:m-3 md:max-w-3xl lg:m-4"
       style={{
         boxShadow: '0px 0px 10px 0px #393e46',
       }}
