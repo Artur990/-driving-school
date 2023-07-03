@@ -14,7 +14,7 @@ const katA2Cart = ({}) => {
             height={300}
             className=" mx-auto h-72 w-full rounded-md object-cover  sm:w-3/4"
             src="/bmw.png"
-            alt="/bmw.png"
+            alt="bmw"
           />
 
           <div className="mt-10 text-xl font-semibold  uppercase tracking-wide  text-red-600 sm:ml-20 ">

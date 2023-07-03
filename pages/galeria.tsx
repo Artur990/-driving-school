@@ -1,10 +1,8 @@
-import React from 'react';
-
 import Image from 'next/image';
 import Head from 'next/head';
 
-import SliderGallery from '../components/SliderGallery';
-import Registration from '@/components/Registration';
+import { SliderGallery } from '../components/SliderGallery';
+import { Registration } from '@/components/Registration';
 
 const images = [
   '/o-nas/o-nas1.jpg',

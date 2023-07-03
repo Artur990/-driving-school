@@ -12,7 +12,7 @@ const KatACart = () => {
             height={300}
             className=" mx-auto h-72 w-full rounded-md object-cover  sm:w-3/4"
             src="/mt07-katA.png"
-            alt="/mt07-katA.png"
+            alt="mt07-katA"
           />
           <div className="mt-10 text-xl font-semibold  uppercase tracking-wide  text-red-600 sm:ml-20 ">
             <del className="text-black">2600 zł</del>

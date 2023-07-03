@@ -7,7 +7,7 @@ import KatBECart from './categories/b/KatBECart';
 interface KatAProps {}
 
 const KatB: FC<KatAProps> = ({}) => {
-  const [activeTab, setActiveTab] = useState<string>('B');
+  const [activeTab, setActiveTab] = useState('B');
   return (
     <div>
       <div className="flex items-center justify-center">

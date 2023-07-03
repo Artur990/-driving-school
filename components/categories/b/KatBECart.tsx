@@ -14,7 +14,7 @@ const KatBECart = () => {
             height={300}
             className=" mx-auto h-52 w-full rounded-md object-cover  sm:w-3/4"
             src="/nissan.png"
-            alt="/car-szkola1.png"
+            alt="car-szkola1"
           />
           <div className="mt-10 text-xl font-semibold  uppercase tracking-wide  text-red-600 sm:ml-20 ">
             <del className="text-black">2600 zł</del>

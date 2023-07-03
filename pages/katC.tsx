@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Registration from '@/components/Registration';
+import { Registration } from '@/components/Registration';
 
 export default function Index() {
   return (

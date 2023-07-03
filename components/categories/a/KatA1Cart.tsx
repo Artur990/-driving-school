@@ -1,6 +1,5 @@
 import KatCart from '@/components/ui/KatCart';
 import Image from 'next/image';
-import React from 'react';
 
 const katA1Cart = ({}) => {
   return (
@@ -15,7 +14,7 @@ const katA1Cart = ({}) => {
             height={300}
             className=" mx-auto h-72 w-full rounded-md object-cover  sm:w-3/4"
             src="/YBR125.png"
-            alt="/YBR125.png"
+            alt="YBR125"
           />
 
           <div className="mt-10 text-xl font-semibold  uppercase tracking-wide  text-red-600 sm:ml-20 ">

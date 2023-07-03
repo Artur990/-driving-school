@@ -32,7 +32,7 @@ const Distinguishes = () => {
       <h1 className="z-9 relative p-10 text-center  text-3xl font-extrabold  xl:text-4xl">
         Co nas wyróżnia?
       </h1>
-      <p className="mb-10 text-center">
+      <p className="mb-10 text-center text-xl">
         Wybór odpowiedniej szkoły jazdy to ważna decyzja! Poznaj nasze przewagi,
         dzięki którym szybciej nabierzesz odpowiednich nawyków i z większą
         pewnością podejdziesz do egzaminu.
@@ -40,13 +40,15 @@ const Distinguishes = () => {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((feature, index) => (
           <div key={index} className="rounded bg-white p-6 shadow">
-            <div className="mb-5 flex items-center justify-center rounded-full text-black">
+            <div className="t rounded-ful mb-5 flex items-center justify-center text-red-500">
               {feature.icon}
             </div>
-            <h3 className="mb-2 text-center text-xl font-bold">
+            <h3 className="mb-2 h-14 text-center text-xl font-bold sm:h-20">
               {feature.title}
             </h3>
-            <p className="text-base text-gray-600">{feature.description}</p>
+            <p className="text-center text-base text-stone-600 ">
+              {feature.description}
+            </p>
           </div>
         ))}
       </div>

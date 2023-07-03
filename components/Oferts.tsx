@@ -6,7 +6,7 @@ import Track from './oferts/Track';
 import Bus from './oferts/Bus';
 import Image from 'next/image';
 
-const Oferts = () => {
+export const Oferts = () => {
   const [activeTab, setActiveTab] = useState('car');
   return (
     <section className="container mx-auto bg-white py-16 ">
@@ -81,5 +81,3 @@ const Oferts = () => {
     </section>
   );
 };
-
-export default Oferts;

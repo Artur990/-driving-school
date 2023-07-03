@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import Form from './ui/ContactForm';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
 import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';

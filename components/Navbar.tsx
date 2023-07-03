@@ -1,14 +1,12 @@
 import { FaCar, FaMotorcycle, FaTruckMoving, FaBusAlt } from 'react-icons/fa';
-
-import { FC, useEffect, useState } from 'react';
 import { GrGallery } from 'react-icons/gr';
 
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import Image from 'next/image';
 import useNavigation from '@/hooks/useNavigation';
+import Link from 'next/link';
 
-export default function Nav() {
+export const Navbar = () => {
   const {
     isOpen,
     setIsOpen,
@@ -19,9 +17,9 @@ export default function Nav() {
     toggleMenuMobile,
   } = useNavigation();
   return (
-    <header className=" relative left-0 right-0 top-0 z-50 ">
+    <header className=" relative left-0 right-0 top-0 z-50 border-b border-gray-400 ">
       <nav
-        className="mx-auto flex  h-auto w-full max-w-7xl items-center justify-between border-b border-gray-400 bg-white p-1 shadow-sm backdrop-blur-md lg:px-8"
+        className="container mx-auto flex  h-auto w-full max-w-7xl items-center justify-between  bg-white p-1 shadow-sm backdrop-blur-md lg:px-8"
         aria-label="Global"
       >
         {/* <div className="container mx-auto  "> */}
@@ -226,9 +224,9 @@ export default function Nav() {
           </div>
 
           <Link
-            href={'/onas'}
+            href={'/o-nas'}
             className={`ext-gray-900 text-sm  font-semibold leading-6 ${
-              activePage.toLowerCase() === 'onas'
+              activePage.toLowerCase() === 'o-nas'
                 ? ' border-b-4 border-red-600'
                 : ' link-with-border '
             }`}
@@ -390,7 +388,7 @@ export default function Nav() {
                       )}
                     </div>
                     <Link
-                      href="/onas"
+                      href="/o-nas"
                       onClick={toggleMenuMobile}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200"
                     >
@@ -435,4 +433,4 @@ export default function Nav() {
       </div>
     </header>
   );
-}
+};

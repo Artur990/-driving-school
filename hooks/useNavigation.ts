@@ -3,9 +3,9 @@ import { useRouter } from 'next/router';
 
 const useNavigation = () => {
   const router = useRouter();
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [openMobile, setIsOpenMobile] = useState<boolean>(false);
-  const [activePage, setActivePage] = useState<string>('');
+  const [isOpen, setIsOpen] = useState(false);
+  const [openMobile, setIsOpenMobile] = useState(false);
+  const [activePage, setActivePage] = useState('');
 
   const handleNavigation = (target: string, href: string) => {
     if (window.location.pathname === '/') {
@@ -36,8 +36,8 @@ const useNavigation = () => {
         case 'galeria':
           setActivePage('galeria');
           break;
-        case 'onas':
-          setActivePage('onas');
+        case 'o-nas':
+          setActivePage('o-nas');
           break;
         case 'kontakt':
           setActivePage('kontakt');

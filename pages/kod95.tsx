@@ -1,7 +1,5 @@
-import React from 'react';
-
+import { RegistrationForm } from '@/components/ui/RegistrationForm';
 import Head from 'next/head';
-import RegistrationForm from '@/components/Registration';
 
 export default function Index() {
   return (

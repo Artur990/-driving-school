@@ -1,7 +1,6 @@
 import { useRegistrationForm } from '@/hooks/useRegistrationForm';
-import { FC } from 'react';
 
-const RegistrationForm: FC<{}> = ({}) => {
+export const RegistrationForm = () => {
   const formik = useRegistrationForm();
   return (
     <form
@@ -116,7 +115,7 @@ const RegistrationForm: FC<{}> = ({}) => {
       <div className="col-span-2 mt-10">
         <button
           type="submit"
-          className="block w-full rounded-md bg-[#d71f27] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500
+          className="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500
 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
           Wyślij
@@ -125,5 +124,3 @@ focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 foc
     </form>
   );
 };
-
-export default RegistrationForm;

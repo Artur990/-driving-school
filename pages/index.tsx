@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Head from 'next/head';
 import Header from '@/components/Header';
 
@@ -8,8 +6,8 @@ import FiveSteps from '@/components/FiveSteps';
 import Distinguishes from '@/components/Distinguishes';
 import Features from '@/components/Features';
 import Carousel from '@/components/Carousel';
-import Oferts from '@/components/Oferts';
-import Registration from '@/components/Registration';
+import { Oferts } from '@/components/Oferts';
+import { Registration } from '@/components/Registration';
 
 export default function Home() {
   return (

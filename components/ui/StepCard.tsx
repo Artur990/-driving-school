@@ -1,4 +1,4 @@
-import React, { useState, useRef, FC } from 'react';
+import { useState, useRef, FC } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { FaChevronDown } from 'react-icons/fa';
 

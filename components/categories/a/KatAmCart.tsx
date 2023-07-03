@@ -14,7 +14,7 @@ const KatAmCart = () => {
             height={300}
             className=" mx-auto h-80 w-full rounded-md object-cover  sm:w-3/4"
             src="/volcano50.png"
-            alt="/volcano50.png"
+            alt="volcano50"
           />
 
           <div className="mt-10 text-xl font-semibold  uppercase tracking-wide  text-red-600 sm:ml-20 ">

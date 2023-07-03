@@ -1,5 +1,5 @@
 import Food from '@/components/Food';
-import Nav from '@/components/Nav';
+import { Navbar } from '@/components/Navbar';
 import Head from 'next/head';
 import { FC, ReactNode } from 'react';
 // import '../styles/globals.css';
@@ -29,7 +29,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           w ofercie prawo jazdy kat. B, A, C, D, T, kwalifikacje(kod95)"
         />
       </Head>
-      <Nav />
+      <Navbar />
       {children}
       <Food />
     </>

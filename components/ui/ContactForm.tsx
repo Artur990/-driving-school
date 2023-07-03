@@ -1,7 +1,6 @@
 import { useContactForm } from '@/hooks/useContactForm';
-import { FC } from 'react';
 
-const ContactForm: FC<{}> = ({}) => {
+const ContactForm = () => {
   const formik = useContactForm();
   return (
     <form

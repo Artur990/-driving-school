@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaCar, FaSmile, FaHeartbeat, FaMoneyCheckAlt } from 'react-icons/fa';
 
 export default function Features() {
@@ -29,17 +28,17 @@ export default function Features() {
   ];
 
   return (
-    <section className="container  mx-auto  bg-zinc-800 px-4 py-32 text-white ">
-      <div className="-cols-1  grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <section className="bg-zinc-800 px-4 py-32 text-white ">
+      <div className="-cols-1  container  mx-auto grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((feature, index) => (
           <div key={index} className=" rounded bg-transparent p-6 shadow">
             <div className="r mb-5 flex  items-center  justify-center">
               {feature.icon}
             </div>
-            <h3 className="mb-2 text-center text-xl font-bold">
+            <h3 className="mb-2 h-14 text-center text-xl font-bold sm:h-14">
               {feature.title}
             </h3>
-            <p className="pl-3 text-base text-gray-200">
+            <p className=" text-center text-base text-gray-400">
               {feature.description}
             </p>
           </div>

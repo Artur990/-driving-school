@@ -7,7 +7,7 @@ interface SliderGalleryProps {
   images: string[];
 }
 
-const SliderGallery: FC<SliderGalleryProps> = ({ images }) => {
+export const SliderGallery: FC<SliderGalleryProps> = ({ images }) => {
   return (
     <div className="mx-auto w-full lg:w-2/3">
       <Carousel
@@ -15,7 +15,7 @@ const SliderGallery: FC<SliderGalleryProps> = ({ images }) => {
         infiniteLoop={true}
         autoPlay={true}
         showStatus={false}
-        interval={2000}
+        interval={4000}
         showIndicators={true}
         centerMode={true}
         centerSlidePercentage={100}
@@ -35,5 +35,3 @@ const SliderGallery: FC<SliderGalleryProps> = ({ images }) => {
     </div>
   );
 };
-
-export default SliderGallery;

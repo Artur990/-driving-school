@@ -1,8 +1,8 @@
 import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
 import { TbBuildingSkyscraper } from 'react-icons/tb';
-import RegistrationForm from './ui/RegistrationForm';
+import { RegistrationForm } from './ui/RegistrationForm';
 
-const Registration = () => {
+export const Registration = () => {
   return (
     <section className=" flex h-auto w-full items-center justify-center p-10 py-16">
       <div>
@@ -60,5 +60,3 @@ const Registration = () => {
     </section>
   );
 };
-
-export default Registration;

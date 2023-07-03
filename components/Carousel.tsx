@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FC } from 'react';
 import { Carousel as CaruselCardd } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import CaruselCard from './ui/CaruselCard';
 
-const Carousel = ({}) => {
+const Carousel = () => {
   const images1 = [
     ['/kursanci/kursant1.jpg', '/kursanci/kursant2.jpg'],
     ['/kursanci/kursant3.jpg', '/kursanci/kursant4.jpg'],
@@ -45,7 +44,7 @@ const Carousel = ({}) => {
         <CaruselCard images={images2} />
       </div>
       <Link
-        href="onas"
+        href="o-nas"
         className="mx-auto mt-10 block w-[90%] rounded-lg bg-red-700 px-3 py-2.5 text-center text-2xl font-bold leading-7  text-white hover:opacity-80  lg:w-1/3"
       >
         Zobacz więcej opinii {'>>'}

@@ -1,4 +1,3 @@
-import React from 'react';
 import { CiFaceSmile } from 'react-icons/ci';
 import StepCard from './ui/StepCard';
 
@@ -36,15 +35,15 @@ const steps = [
 ];
 export default function FiveSteps() {
   return (
-    <section className="container mx-auto">
-      <div id="w-5-krokach" className=" min-w-[420px] bg-zinc-800 py-16">
+    <section className=" bg-zinc-800 ">
+      <div id="w-5-krokach" className="container mx-auto min-w-[420px] py-16">
         <h1 className="z-9 relative p-10 text-center  text-3xl font-extrabold text-red-600 xl:text-4xl">
           Prawo jazdy w 5 krokach
         </h1>
         {steps.map((step, index) => (
           <StepCard key={index} {...step} />
         ))}
-        <h2 className="p-10 pt-32 text-center text-5xl font-bold text-white">
+        <h2 className="p-10 pt-32 text-start text-5xl font-bold text-white lg:text-center">
           Wybierz mądrze i zdaj! Postaw na szkołę nauki jazdy, którą polecają
           nasi kursanci!{' '}
           <span className="relative top-2 inline-block ">

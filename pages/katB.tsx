@@ -1,5 +1,5 @@
 import KatB from '@/components/KatB';
-import Registration from '@/components/Registration';
+import { Registration } from '@/components/Registration';
 import Head from 'next/head';
 
 export default function Index() {

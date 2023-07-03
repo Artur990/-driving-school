@@ -1,5 +1,5 @@
 'strict mode';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import 'tailwindcss/tailwind.css';
 import Modal from 'react-modal';
 import Image from 'next/image';
@@ -13,9 +13,9 @@ const images = [
 
 const Gallery = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [selectedImg, setSelectedImg] = useState<any>(null);
+  const [selectedImg, setSelectedImg] = useState('');
 
-  function openModal(imgSrc: any) {
+  function openModal(imgSrc: string) {
     setSelectedImg(imgSrc);
     setIsOpen(true);
   }
@@ -55,8 +55,8 @@ const Gallery = () => {
           &times;
         </button>
         <Image
-          width={400}
-          height={300}
+          width={600}
+          height={500}
           src={selectedImg}
           alt="photo"
           className="max-h-full max-w-full"

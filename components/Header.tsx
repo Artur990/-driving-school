@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 import { AiOutlineCheckCircle } from 'react-icons/ai';
@@ -8,7 +7,7 @@ import { MdDateRange } from 'react-icons/md';
 import Image from 'next/image';
 const Header = () => {
   return (
-    <section className=" mt-0 h-[100vh] w-full min-w-[380px]">
+    <section className=" mt-2  w-full min-w-[380px]">
       <div className="relative h-screen bg-black">
         <div className="absolute inset-0">
           <Image
@@ -19,9 +18,9 @@ const Header = () => {
           />
         </div>
         <div className="container mx-auto ml-0 mt-0 flex h-auto w-3/4 flex-col items-start px-4 pt-10 sm:ml-12 sm:items-start md:ml-24 lg:ml-36 2xl:pl-28 2xl:pt-36">
-          <div className="mt-15 z-10 flex h-[250px] w-[350px] flex-col justify-between bg-[#d71f27] sm:h-[180px] sm:w-[550px] md:h-[200px] md:w-[550px] lg:w-[600px]">
+          <div className="mt-15 z-10 flex h-[250px] w-[350px] flex-col justify-between bg-red-600 sm:h-[180px] sm:w-[550px] md:h-[200px] md:w-[550px] lg:w-[600px]">
             <div className="custom-divider relative bottom-3 py-0" />
-            <h1 className="p-1 text-center text-2xl font-extrabold text-white sm:text-3xl md:text-5xl">
+            <h1 className="p-1 text-center text-3xl font-extrabold  text-white  ">
               SZKOŁA JAZDY STRAŻAK
             </h1>
             <div className="z-11 relative  flex h-1/4 w-full items-center bg-white p-1 text-base font-bold text-black sm:left-5 sm:h-1/4 md:text-xl">
@@ -30,7 +29,7 @@ const Header = () => {
               </h2>
             </div>
           </div>
-          <div className="z-10 flex h-14 w-64 items-center bg-[#d71f27] pl-10 font-bold text-white">
+          <div className="z-10 flex h-14 w-64 items-center bg-red-600 pl-10 font-bold text-white">
             Zadzwoń 508 808 310
           </div>
           <Link

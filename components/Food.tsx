@@ -1,8 +1,4 @@
-import React from 'react';
-
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
-import { BsBuildings } from 'react-icons/bs';
-import { TbBuildingSkyscraper } from 'react-icons/tb';
 import Image from 'next/image';
 
 const containerStyle = {
@@ -28,7 +24,7 @@ const Food = () => {
     <>
       <div className="container mx-auto block  w-full  justify-between bg-zinc-800 text-white lg:flex lg:min-h-[70%] lg:w-[95%]  ">
         <div className="flex w-full flex-col items-center  lg:w-1/2">
-          <div className="flex w-full flex-col items-center   justify-center p-2 pb-0 lg:flex-row lg:items-start  xl:p-24 xl:pb-2    ">
+          <div className="flex w-full flex-col items-center   justify-center p-2  lg:flex-row lg:items-start  xl:p-20 xl:pb-2    ">
             <Image
               width={200}
               height={200}
@@ -62,16 +58,16 @@ const Food = () => {
             </div>
           </div>
           <div className="h-[1px] w-3/5 bg-white"></div>
-          <h2 className="my-0 text-2xl font-extrabold text-red-500">
+          <h2 className=" text-2xl font-extrabold text-red-500">
             Kontakt Telefoniczny{' '}
           </h2>
-          <h2 className="my-0 text-2xl font-extrabold">+48 508 808 310 </h2>
+          <h2 className="mb-5 text-2xl font-extrabold">+48 508 808 310 </h2>
         </div>
         <div className=" w-3/2 lg:w-1/2 ">
           <GoogleMapComponent />
         </div>
       </div>
-      <div className="mt-10  flex h-[130px] w-full items-center justify-center bg-stone-900 ">
+      <div className="mb-0 flex  h-[130px] w-full items-center justify-center bg-stone-900 lg:mb-10 ">
         <h2 className="text-center text-white">
           © 2022 Wszelkie prawa zastrzeżone. Szkoła jazdy Strażak Bydgoszcz
           Polityka Prywatności

@@ -1,24 +1,22 @@
-import React from 'react';
-
 import Head from 'next/head';
 import Image from 'next/image';
 
-import Registration from '@/components/Registration';
+import { Registration } from '@/components/Registration';
 import InstructorCard from '@/components/ui/InstructorCard';
 
 export default function Index() {
   const instructors = [
-    { name: 'Marcin', image: '/onas/marcin.jpg' },
-    { name: 'Bartek', image: '/onas/bartek.jpg' },
-    { name: 'Szczepan', image: '/onas/szczepan.jpg' },
+    { name: 'Marcin', image: '/o-nas/marcin.jpg' },
+    { name: 'Bartek', image: '/o-nas/bartek.jpg' },
+    { name: 'Szczepan', image: '/o-nas/szczepan.jpg' },
   ];
   const photos = [
-    '/onas/opinions/opinion1.png',
-    '/onas/opinions/opinion4.png',
-    '/onas/opinions/opinion3.png',
-    '/onas/opinions/opinion2.png',
-    '/onas/opinions/opinion5.png',
-    '/onas/opinions/opinion6.png',
+    '/o-nas/opinions/opinion1.png',
+    '/o-nas/opinions/opinion4.png',
+    '/o-nas/opinions/opinion3.png',
+    '/o-nas/opinions/opinion2.png',
+    '/o-nas/opinions/opinion5.png',
+    '/o-nas/opinions/opinion6.png',
   ];
 
   return (
@@ -29,7 +27,7 @@ export default function Index() {
         <link rel="icon" href="/logo.jpg" />
       </Head>
 
-      <section className=" bg-[#F7FBFC] py-16">
+      <section className=" bg-lightWhite py-16">
         <div className="mx-auto  px-1">
           <h1 className="mb-8 text-center text-4xl font-bold ">
             Szkoła Jazdy Strażak w Bydgoszczy
@@ -44,9 +42,9 @@ export default function Index() {
           </p>
 
           <div className="mb-8 flex items-center justify-center">
-            <Image src="/onas/team.jpg" alt="" width={900} height={900} />
+            <Image src="/o-nas/team.jpg" alt="" width={900} height={900} />
           </div>
-          <div className="mt-10 bg-[#F7FBFC]">
+          <div className="mt-10 bg-lightWhite">
             <h2 className="mb-4 py-10 text-center text-2xl font-bold ">
               Instruktorzy:
             </h2>
@@ -65,7 +63,7 @@ export default function Index() {
               Zobacz co mówią o nas kursanci:
             </p>
           </div>
-          <div className="flex flex-wrap justify-center bg-[#323232]">
+          <div className="flex flex-wrap justify-center bg-darkGray">
             {photos.map((photo, index) => (
               <div key={index} className="min-h-40 m-5 h-auto w-3/4 lg:w-2/5">
                 <Image
@@ -78,7 +76,7 @@ export default function Index() {
               </div>
             ))}
           </div>
-          <div className="flex justify-center bg-[#323232] py-10 ">
+          <div className="flex justify-center bg-darkGray py-10 ">
             <a
               href="https://www.superprawojazdy.pl/szkola-jazdy-strazak,21769.htm"
               target="_blank"
