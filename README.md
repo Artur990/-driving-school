@@ -1,6 +1,11 @@
+# Live Code 
+
+https://szkola-strazak.vercel.app/
+
 # Firefighter Driving School
 
 This is a project for my friend's Firefighter Driving School. The website includes a reservation form and an inquiry form presenting the school's offerings.
+
 
 ## Description
 
@@ -28,8 +33,7 @@ The project utilizes the following technologies and libraries:
 
 ## Installation Instructions
 
-1. Clone the repository: `git clone https://github.com/YOUR-REPOSITORY-NAME.git`
-2. Install dependencies: `npm install` or `yarn install`
+1. Install dependencies: `npm install` or `yarn install`
 
 ## Running Instructions
 
