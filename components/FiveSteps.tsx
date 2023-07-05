@@ -1,5 +1,5 @@
 import { CiFaceSmile } from 'react-icons/ci';
-import StepCard from './ui/StepCard';
+import { StepCard } from './ui/StepCard';
 
 const steps = [
   {
@@ -33,7 +33,7 @@ const steps = [
       'Gratulacje! Uzyskanie pozytywnego wyniku z egzaminu praktycznego w WORD rozpoczyna ostatni, formalny już etap procedury uzyskiwania prawa jazdy kat. B. WORD wysyła informację o wyniku egzaminu do urzędu, w którym złożyliśmy wniosek o wydanie prawa jazdy. Od momentu, kiedy dokonasz opłaty w urzędzie, Twoje prawo jazdy powinno być gotowe w ciągu 9 dni roboczych. ',
   },
 ];
-export default function FiveSteps() {
+export const FiveSteps = () => {
   return (
     <section className=" bg-zinc-800 ">
       <div id="w-5-krokach" className="container mx-auto min-w-[420px] py-16">
@@ -58,4 +58,4 @@ export default function FiveSteps() {
       </div>
     </section>
   );
-}
+};

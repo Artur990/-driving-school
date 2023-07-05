@@ -1,10 +1,8 @@
-import Form from './ui/ContactForm';
-import { AiOutlineCheckCircle } from 'react-icons/ai';
 import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
-import { BsArrowRightShort } from 'react-icons/bs';
 import { TbBuildingSkyscraper } from 'react-icons/tb';
+import { ContactForm } from './ui/ContactForm';
 
-const Contact = () => {
+export const Contact = () => {
   return (
     <section className="container mx-auto h-auto w-full lg:p-10 ">
       <h2 className="mb-1 ml-6 mt-10 hidden text-center text-3xl  font-extrabold  lg:block xl:text-4xl">
@@ -63,7 +61,7 @@ const Contact = () => {
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:hidden">
                 FORMULARZ KONTAKTOWY
               </h2>
-              <Form />
+              <ContactForm />
             </div>
           </div>
         </div>
@@ -71,5 +69,3 @@ const Contact = () => {
     </section>
   );
 };
-
-export default Contact;

@@ -5,7 +5,8 @@ import { AiOutlineCheckCircle } from 'react-icons/ai';
 import { BsArrowRightShort } from 'react-icons/bs';
 import { MdDateRange } from 'react-icons/md';
 import Image from 'next/image';
-const Header = () => {
+
+export const Header = () => {
   return (
     <section className=" mt-2  w-full min-w-[380px]">
       <div className="relative h-screen bg-black">
@@ -64,4 +65,3 @@ const Header = () => {
     </section>
   );
 };
-export default Header;

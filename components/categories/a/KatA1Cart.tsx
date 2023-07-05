@@ -1,7 +1,7 @@
-import KatCart from '@/components/ui/KatCart';
+import { KatCart } from '@/components/ui/KatCart';
 import Image from 'next/image';
 
-const katA1Cart = ({}) => {
+export const KatA1Cart = ({}) => {
   return (
     <section className="cartKat container mx-auto">
       <h1 className="pb-10 pt-6 text-center text-4xl font-bold">
@@ -141,5 +141,3 @@ const katA1Cart = ({}) => {
     </section>
   );
 };
-
-export default katA1Cart;

@@ -11,7 +11,7 @@ const images = [
   { src: '/strazak4.jpg', description: 'Opis zdjęcia 4' },
 ];
 
-const Gallery = () => {
+export const Gallery = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [selectedImg, setSelectedImg] = useState('');
 
@@ -65,5 +65,3 @@ const Gallery = () => {
     </section>
   );
 };
-
-export default Gallery;

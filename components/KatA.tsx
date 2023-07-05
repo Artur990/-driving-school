@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { useState } from 'react';
-import KatACart from './categories/a/KatACart';
-import KatAmCart from './categories/a/KatAmCart';
-import KatA1Cart from './categories/a/KatA1Cart';
-import KatA2Cart from './categories/a/KatA2Cart';
+import { KatACart } from './categories/a/KatACart';
+import { KatAmCart } from './categories/a/KatAmCart';
+import { KatA1Cart } from './categories/a/KatA1Cart';
+import { KatA2Cart } from './categories/a/KatA2Cart';
 
-const KatA = () => {
+export const KatA = () => {
   const [activeTab, setActiveTab] = useState('A');
   return (
     <div>
@@ -144,5 +144,3 @@ const KatA = () => {
     </div>
   );
 };
-
-export default KatA;

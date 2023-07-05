@@ -7,7 +7,7 @@ interface KatCartProps {
   imgSrc: string;
 }
 
-const KatCart: FC<KatCartProps> = ({ title, children, imgSrc }) => {
+export const KatCart: FC<KatCartProps> = ({ title, children, imgSrc }) => {
   return (
     <div
       className="w-full] m-1 mx-auto my-3 max-w-md transform overflow-hidden rounded-xl transition-transform duration-200 ease-in-out  sm:m-3 md:max-w-3xl lg:m-4"
@@ -35,5 +35,3 @@ const KatCart: FC<KatCartProps> = ({ title, children, imgSrc }) => {
     </div>
   );
 };
-
-export default KatCart;

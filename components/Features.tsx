@@ -1,6 +1,6 @@
 import { FaCar, FaSmile, FaHeartbeat, FaMoneyCheckAlt } from 'react-icons/fa';
 
-export default function Features() {
+export const Features = () => {
   const features = [
     {
       icon: <FaCar className="h-20 w-20 text-red-600" />,
@@ -46,4 +46,4 @@ export default function Features() {
       </div>
     </section>
   );
-}
+};

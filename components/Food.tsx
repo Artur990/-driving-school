@@ -19,7 +19,7 @@ const GoogleMapComponent = () => {
   );
 };
 
-const Food = () => {
+export const Food = () => {
   return (
     <>
       <div className="container mx-auto block  w-full  justify-between bg-zinc-800 text-white lg:flex lg:min-h-[70%] lg:w-[95%]  ">
@@ -76,5 +76,3 @@ const Food = () => {
     </>
   );
 };
-
-export default Food;

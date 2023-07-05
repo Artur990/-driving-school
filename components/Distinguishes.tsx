@@ -26,7 +26,7 @@ const features = [
       'Dlaczego możemy tak sądzić? Mamy imponującą liczbę kursantów zdających za pierwszym razem oraz setki pozytywnych opinii. Cieszy nas również, że nasi instruktorzy to nie tylko znakomici fachowcy od ruchu drogowego, ale po prostu fajni ludzie.',
   },
 ];
-const Distinguishes = () => {
+export const Distinguishes = () => {
   return (
     <section id="co-nas-wyroznia" className="container mx-auto px-4 py-16">
       <h1 className="z-9 relative p-10 text-center  text-3xl font-extrabold  xl:text-4xl">
@@ -55,5 +55,3 @@ const Distinguishes = () => {
     </section>
   );
 };
-
-export default Distinguishes;

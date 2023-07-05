@@ -2,9 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Carousel as CaruselCardd } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import CaruselCard from './ui/CaruselCard';
+import { CaruselCard } from './ui/CaruselCard';
 
-const Carousel = () => {
+export const Carousel = () => {
   const images1 = [
     ['/kursanci/kursant1.jpg', '/kursanci/kursant2.jpg'],
     ['/kursanci/kursant3.jpg', '/kursanci/kursant4.jpg'],
@@ -18,8 +18,6 @@ const Carousel = () => {
       '/kursanci/kursant2.jpg',
       '/kursanci/kursant3.jpg',
       '/kursanci/kursant4.jpg',
-      // '/kursanci/kursant5.jpg',
-      // '/kursanci/kursant10.jpg',
     ],
     [
       '/kursanci/kursant6.jpg',
@@ -52,5 +50,3 @@ const Carousel = () => {
     </section>
   );
 };
-
-export default Carousel;

@@ -6,7 +6,7 @@ interface InstructorCardProps {
   image: string;
 }
 
-const InstructorCard: FC<InstructorCardProps> = ({ name, image }) => {
+export const InstructorCard: FC<InstructorCardProps> = ({ name, image }) => {
   return (
     <div className="m-6 flex h-3/4 w-full lg:w-1/3  lg:flex-col ">
       <div className="mr-4 h-1/4 w-full bg-gray-500 sm:h-1/4 sm:w-full">
@@ -24,4 +24,3 @@ const InstructorCard: FC<InstructorCardProps> = ({ name, image }) => {
     </div>
   );
 };
-export default InstructorCard;

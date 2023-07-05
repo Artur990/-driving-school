@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const Car = () => {
+export const Car = () => {
   return (
     <div className="cartOfert">
       <div className="p-8 sm:p-10 lg:flex-auto">
@@ -131,5 +131,3 @@ const Car = () => {
     </div>
   );
 };
-
-export default Car;

@@ -1,6 +1,6 @@
 import { useContactForm } from '@/hooks/useContactForm';
 
-const ContactForm = () => {
+export const ContactForm = () => {
   const formik = useContactForm();
   return (
     <form
@@ -112,4 +112,3 @@ const ContactForm = () => {
     </form>
   );
 };
-export default ContactForm;

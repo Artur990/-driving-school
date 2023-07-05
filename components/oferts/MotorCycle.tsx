@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const MotorCycle = () => {
+export const MotorCycle = () => {
   return (
     <div className="cartOfert">
       <div className="p-8 sm:p-10 lg:flex-auto">
@@ -134,5 +134,3 @@ const MotorCycle = () => {
     </div>
   );
 };
-
-export default MotorCycle;

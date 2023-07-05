@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-import Contact from '@/components/Contact';
+import { Contact } from '@/components/Contact';
 
 export default function Index() {
   return (

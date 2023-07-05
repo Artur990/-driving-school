@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const Bus = () => {
+export const Bus = () => {
   return (
     <div className="cartOfert">
       <div className="p-8 sm:p-10 lg:flex-auto">
@@ -131,5 +131,3 @@ const Bus = () => {
     </div>
   );
 };
-
-export default Bus;

@@ -8,7 +8,7 @@ interface StepCardProps {
   description: string;
 }
 
-const StepCard: FC<StepCardProps> = ({ icon, title, description }) => {
+export const StepCard: FC<StepCardProps> = ({ icon, title, description }) => {
   const [open, setOpen] = useState(false);
   const descriptionRef = useRef<HTMLDivElement>(null);
 
@@ -46,5 +46,3 @@ const StepCard: FC<StepCardProps> = ({ icon, title, description }) => {
     </div>
   );
 };
-
-export default StepCard;

@@ -1,8 +1,8 @@
-import Food from '@/components/Food';
+import { Food } from '@/components/Food';
 import { Navbar } from '@/components/Navbar';
 import Head from 'next/head';
 import { FC, ReactNode } from 'react';
-// import '../styles/globals.css';
+
 interface LayoutProps {
   children: ReactNode;
 }

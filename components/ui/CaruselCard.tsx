@@ -6,7 +6,7 @@ interface CaruselCardProps {
   images: string[][];
 }
 
-const CaruselCard: FC<CaruselCardProps> = ({ images }) => {
+export const CaruselCard: FC<CaruselCardProps> = ({ images }) => {
   return (
     <Carousel
       showThumbs={false}
@@ -39,5 +39,3 @@ const CaruselCard: FC<CaruselCardProps> = ({ images }) => {
     </Carousel>
   );
 };
-
-export default CaruselCard;

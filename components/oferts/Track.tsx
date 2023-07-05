@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const Track = ({}) => {
+export const Track = ({}) => {
   return (
     <div className="cartOfert">
       <div className="p-8 sm:p-10 lg:flex-auto">
@@ -132,5 +132,3 @@ const Track = ({}) => {
     </div>
   );
 };
-
-export default Track;

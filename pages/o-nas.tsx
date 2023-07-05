@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import { Registration } from '@/components/Registration';
-import InstructorCard from '@/components/ui/InstructorCard';
+import { InstructorCard } from '@/components/ui/InstructorCard';
 
 export default function Index() {
   const instructors = [

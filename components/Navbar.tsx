@@ -3,7 +3,7 @@ import { GrGallery } from 'react-icons/gr';
 
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import useNavigation from '@/hooks/useNavigation';
+import { useNavigation } from '@/hooks/useNavigation';
 import Link from 'next/link';
 
 export const Navbar = () => {

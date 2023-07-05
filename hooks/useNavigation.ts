@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
-const useNavigation = () => {
+export const useNavigation = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [openMobile, setIsOpenMobile] = useState(false);
@@ -72,5 +72,3 @@ const useNavigation = () => {
     toggleMenuMobile,
   };
 };
-
-export default useNavigation;

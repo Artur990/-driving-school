@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { FC, useState } from 'react';
-import KatBCart from './categories/b/KatBCart';
-import KatBECart from './categories/b/KatBECart';
+import { KatBCart } from './categories/b/KatBCart';
+import { KatBECart } from './categories/b/KatBECart';
 
 interface KatAProps {}
 

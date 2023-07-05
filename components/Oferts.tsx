@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { FaCar, FaMotorcycle, FaTruckMoving, FaBusAlt } from 'react-icons/fa';
-import Car from './oferts/Car';
-import MotorCycle from './oferts/MotorCycle';
-import Track from './oferts/Track';
-import Bus from './oferts/Bus';
+import { Car } from './oferts/Car';
+import { MotorCycle } from './oferts/MotorCycle';
+import { Track } from './oferts/Track';
+import { Bus } from './oferts/Bus';
 import Image from 'next/image';
 
 export const Oferts = () => {
